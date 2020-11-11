@@ -4,15 +4,11 @@ import Loader from "react-loader-spinner";
 
 import { login } from "../../api/login/index";
 import LoginForm from "./loginForm";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { loginSubmit } from "redux/actions/login/actionCreater";
-import * as Action from "../../redux/actions/login/actionCreater"
 // import arrowGroup from '/images/icons/arrowGroup.png'
 
 function Home(props) {
   const LoginStore = useSelector((state) => state.login);
-  console.log("LoginStore=======>", LoginStore);
+  console.log("LoginStore=======>",LoginStore)
   const dispatch = useDispatch();
 
   const Login = async (data) => {
@@ -20,17 +16,8 @@ function Home(props) {
     dispatch(login(data, props));
   };
 
-  useEffect(() => {
-    if(LoginStore.errorMsg){
-      toast.error(LoginStore.errorMsg)
-      dispatch(Action.resetError())
-    }
-  },[LoginStore.errorMsg]);
-
   return (
     <div class="loginDetailPage">
-      <ToastContainer />
-
       <Loader
         className="circle_cover"
         type="Rings"
@@ -59,7 +46,7 @@ function Home(props) {
           <LoginForm
             onSubmit={Login}
             parentProps={props}
-            errorMsg=""
+            errorMsg={LoginStore.errorMsg}
           />
         </div>
 

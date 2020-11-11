@@ -1,15 +1,8 @@
 import React, { Component } from "react";
-import * as CONFIG from "../../config.json";
+import * as CONFIG from '../../config.json'
 import axios from "axios";
 import * as AGENDA_APIS from "../../api/agenda/index";
 import io from "socket.io-client";
-<<<<<<< HEAD
-import Loader from "react-loader-spinner";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Footer from '../common/footer'
-=======
->>>>>>> 25bb822f879310af4c899181ff3405187e784c35
 
 class Conference extends Component {
   constructor(props) {
@@ -21,14 +14,7 @@ class Conference extends Component {
       videoUrl: "",
       questionArr: [],
       myQuestion: "",
-      loading: false,
-      data: {},
-      error: {},
-      message: "",
-      errorMessage: "",
-      note_title:"static"
     };
-    this.onSubmit = this.onSubmit.bind(this);
 
     if (localStorage.getItem("userData")) {
       this.socket = io("https://admin.illumeetvirtual.com", {
@@ -69,12 +55,9 @@ class Conference extends Component {
         }),
       },
       () => {
-        this.scrollToBottom()
-        this.setState(
-          {
-            myQuestion: "",
-          }
-        );
+        this.setState({
+          myQuestion: "",
+        });
       }
     );
   };
@@ -82,19 +65,13 @@ class Conference extends Component {
   getPreviousQuestion = async () => {
     try {
       let questionData = await axios.get(
-        `${CONFIG.BASE_URL}/api/liveQuestion?agendaId=${this.props.match.params.webinarId}`
+        `${CONFIG.BASE_URL}/liveQuestion?agendaId=${this.props.match.params.webinarId}`
       );
       console.log("old Question=======", questionData.data);
       if (questionData.data.status == 200) {
-        this.setState(
-          {
-            questionArr: this.state.questionArr.concat(questionData.data.data),
-          },
-          () => {
-            console.log("scrol");
-            this.scrollToBottom();
-          }
-        );
+        this.setState({
+          questionArr: this.state.questionArr.concat(questionData.data.data),
+        });
       }
     } catch (error) {
       console.log("error.message", error.message);
@@ -114,133 +91,54 @@ class Conference extends Component {
   };
 
   scrollToBottom = () => {
-    console.log("scrollToBottom");
     this.messagesEnd.scrollIntoView({ behavior: "smooth" });
   };
 
-  scrollToBottom2 = () => {
-    console.log("scrollToBottom");
-    var that = this;
-    setTimeout(function () {
-      that.messagesEnd.scrollIntoView({ behavior: "smooth" });
-    }, 2000);
-  };
   async componentDidMount() {
-    this.setState({ loading: true });
-
     await this.getPreviousQuestion();
     let user_data = JSON.parse(localStorage.getItem("userData"));
     if (user_data) {
-      axios.defaults.headers.common["token"] = "Bearer" + " " + user_data.token;
+      axios.defaults.headers.common["token"] =
+        "Bearer" + " " + user_data.token;
       var data12 = {
-        name: user_data.first_name + " " + user_data.last_name,
+        name: user_data.first_name+' '+user_data.last_name,
         uid: user_data._id,
-        event: localStorage.getItem("eventId"),
+        event: CONFIG.EVENT_ID,
         room: this.props.match.params.title,
         stream_key: this.props.match.params.webinarId,
       };
       await axios
         .post(CONFIG.BASE_URL + "/api/auth-jitsi", data12)
         .then(async (res) => {
-          // window.open(res.data.data, "_blank");
-          this.setState({ url_data: res.data.data.streamLink });
-          //  window.open("/webinar/"+agenda_id+"/"+title.replace(/ |-|\.|/g, ""), "_blank");
+         // window.open(res.data.data, "_blank");
+         this.setState({url_data:res.data.data.streamLink})
+        //  window.open("/webinar/"+agenda_id+"/"+title.replace(/ |-|\.|/g, ""), "_blank");
         })
         .catch((err) => {});
-      await AGENDA_APIS.getAgendaById(this.props.match.params.webinarId).then(
-        (result) => {
+        await  AGENDA_APIS.getAgendaById(this.props.match.params.webinarId).then((result) => {
           console.log("result---->", result);
           if (result.status === 200) {
-            this.setState({ agendaData: result.data });
-            this.setState({ attendees: result.attendees });
-            this.setState({ videoUrl: result.data.videos[0] });
+            this.setState({agendaData:result.data});
+            this.setState({attendees:result.attendees});
+            this.setState({videoUrl:result.data.videos[0]});
           } else {
             console.log("eror===>", result.message);
           }
-        }
-      );
+        });
     }
-    this.setState({ loading: false });
     const { match } = this.props;
     const userData = JSON.parse(localStorage.getItem("userData"));
     var agenda_id = match.params.webinarId;
-    var agenda_data = await AGENDA_APIS.createAgendaJoin(
-      agenda_id,
-      userData._id
-    );
-    this.setState({ data: agenda_data.data });
+   await AGENDA_APIS.createAgendaJoin(agenda_id, userData._id);
+ 
   }
 
-  onChange(el) {
-    let inputName = el.target.name;
-    let inputValue = el.target.value;
-    let statusCopy = Object.assign({}, this.state);
-    statusCopy.data[inputName] = inputValue;
-    this.setState(statusCopy);
-    this.setState({ error: {}, message: "", errorMessage: "" });
-    //console.log(this.state.error.inputName);
-  }
 
-  onSubmit(event) {
-    event.preventDefault();
-    var adengaJoinId = "";
-    this.setState({ error: {} });
-
-    if (!this.state.data.note_title) {
-      this.setState({ error: { note_title: "Title field is required!" } });
-      //createNotification('error','Please fill all fields!','');
-    } else if (!this.state.data.note_description) {
-      this.setState({
-        error: { note_description: "Description field is required!" },
-      });
-      //createNotification('error','Please fill all fields!','');
-    } else {
-      this.setState({ loading: true });
-
-      var data = {
-        note_title: this.state.data.note_title,
-        note_description: this.state.data.note_description,
-      };
-      axios
-        .post(CONFIG.BASE_URL + "/api/add-note/" + this.state.data._id, data)
-        .then((res) => {
-          this.setState({ loading: false });
-
-          if (res.data.status == 200) {
-            toast.success("Notes updated successsfully.");
-          } else if (res.data.status == 500) {
-            toast.error("Something went wrong, please try again later.");
-            this.setState({
-              errorMessage: "Something went wrong, please try again later!",
-            });
-          } else {
-            toast.error("Something went wrong, please try again later.");
-            this.setState({ errorMessage: res.data.message });
-          }
-        })
-        .catch((err) => {
-          toast.error("Something went wrong, please try again later.");
-          this.setState({ loading: false });
-          this.setState({
-            errorMessage: "Something went wrong, please try again later!",
-          });
-        });
-    }
-  }
-
+  
   render() {
     return (
       <>
-        {/* <Loader
-          className="circle_cover"
-          type="Rings"
-          color="#2b2497"
-          height="100"
-          width="100"
-          visible={this.state.loading}
-        /> */}
         <div id="page-content-wrapper">
-          <ToastContainer />
           <div className="innerContentBlock">
             {/* Start Page Title */}
             <div className="sitePageTitle">
@@ -254,7 +152,7 @@ class Conference extends Component {
                   <h3>
                     <span className="backBtn">
                       <a href>
-                      <i className="fa fa-angle-left"  style={{display:"none"}}/>
+                        <i className="fa fa-angle-left" />
                       </a>
                     </span>
                     {this.state.agendaData.title}
@@ -271,8 +169,8 @@ class Conference extends Component {
                     <div className="screenShareOuter">
                       <img src="/images/icons/screenShare.png" alt="" />
                       <div className="screenInnerTitle">
-                        <h5>Thanks for Joining !! Enjoy your Webinar.</h5>
-                        {/* <h3>Presenter is not screensharing yet</h3> */}
+                        <h5>Screensharing</h5>
+                        <h3>Presenter is not screensharing yet</h3>
                       </div>
                     </div>
                     <div className="expandIcon">
@@ -301,11 +199,7 @@ class Conference extends Component {
                           Audience
                         </a>
                       </li>
-                      <li
-                        onClick={() => {
-                          this.scrollToBottom2();
-                        }}
-                      >
+                      <li>
                         <a data-toggle="tab" href="#qandaTab">
                           Q &amp; A
                         </a>
@@ -328,7 +222,7 @@ class Conference extends Component {
 
                           <div className="liveAttendiesList">
                             {this.state.attendees.map((attendee, index) => {
-                              if (attendee.user && attendee.user.role == 3) {
+                              if (attendee.user.role == 3) {
                                 return (
                                   <div className="liveAttendPeople">
                                     <div className="liveAttendImg">
@@ -359,7 +253,7 @@ class Conference extends Component {
                       <div id="qandaTab" className="tab-pane fade">
                         <div className="liveQuestionTab">
                           <div className="audienceTitle">
-                            <h3><i class="fa fa-question-circle" aria-hidden="true"></i> Question and Answer</h3>
+                            <h3> Question and Answer</h3>
                           </div>
                           <div className="liveQuestionList">
                             <div className="boxscroll">
@@ -368,16 +262,13 @@ class Conference extends Component {
                                   return (
                                     <div className="liveQuestionBox">
                                       <div className="questionImg">
-                                        {
-                                          question.userData &&
                                         <img
                                           src={`${process.env.REACT_APP_PROFILE_IMG_URL}/${question.userData.profile_img}`}
                                           alt=""
                                         />
-                                        }
                                       </div>
                                       <div className="questionDetail">
-                                        <h3>{question.userData && question.userData.first_name}</h3>
+                                        <h3>{question.userData.first_name}</h3>
                                         <p>
                                           {question.message}
                                           {/* Should all virtual events be on live
@@ -390,7 +281,62 @@ class Conference extends Component {
                               ) : (
                                 <div>Be the one to ask question</div>
                               )}
-                              <div
+                              {/* <div className="liveQuestionBox">
+                                <div className="questionImg">
+                                  <img src="/images/attendeeImg-2.jpg" alt="" />
+                                </div>
+                                <div className="questionDetail">
+                                  <h3>Weian Shaeng</h3>
+                                  <p>
+                                    How do I combine produced video with live
+                                    video to maintain audience attention?
+                                  </p>
+                                </div>
+                              </div>
+                              <div className="liveQuestionBox">
+                                <div className="questionImg">
+                                  <img src="/images/attendeeImg-3.jpg" alt="" />
+                                </div>
+                                <div className="questionDetail">
+                                  <h3>Weian Shaeng</h3>
+                                  <p>
+                                    How can we use live video to promote a
+                                    virtual event before and after?
+                                  </p>
+                                </div>
+                              </div>
+                              <div className="liveQuestionBox">
+                                <div className="questionImg">
+                                  <img src="/images/attendeeImg-3.jpg" alt="" />
+                                </div>
+                                <div className="questionDetail">
+                                  <h3>Weian Shaeng</h3>
+                                  <p>How did you find out about the webinar?</p>
+                                </div>
+                              </div>
+                              <div className="liveQuestionBox">
+                                <div className="questionImg">
+                                  <img src="/images/attendeeImg-4.jpg" alt="" />
+                                </div>
+                                <div className="questionDetail">
+                                  <h3>Weian Shaeng</h3>
+                                  <p>
+                                    What should we do to limit the risk involved
+                                    with live streaming on the day of the event?
+                                  </p>
+                                </div>
+                              </div>
+                              <div className="liveQuestionBox">
+                                <div className="questionImg">
+                                  <img src="/images/attendeeImg-5.jpg" alt="" />
+                                </div>
+                                <div className="questionDetail">
+                                  <h3>Weian Shaeng</h3>
+                                  <p>How did you find out about the webinar?</p>
+                                </div>
+                              </div>
+                             */}
+                             <div
                                 style={{ float: "left", clear: "both" }}
                                 ref={(el) => {
                                   this.messagesEnd = el;
@@ -429,66 +375,32 @@ class Conference extends Component {
                           </div>
                         </div>
                       </div>
-                      <div id="notesTab" className="tab-pane fade">
-                        <div className="liveNotesTab">
-                          <div className="audienceTitle">
-                            <h3><i class="fa fa-file-text" aria-hidden="true"></i> Note</h3>
-                          </div>
-                          <div className="liveNotesSave">
-                            <div className="liveNotesBox">
-                              {/* <div className="liveNotesTitle">
-                                <label>Title</label>
-                                <input
-                                  type="text"
-                                  className="form-control"
-                                  placeholder="Title"
-                                  value={this.state.data.note_title}
-                                  name="note_title"
-                                  id="note_title"
-                                  onChange={this.onChange.bind(this)}
-                                />
-                                <span className="form-error">
-                                  {this.state.error.note_title}
-                                </span>
-                              </div> */}
-                              <div className="liveNotesDescription">
-                                {/* <label>Content</label> */}
-
-                                <textarea
-                                  className="form-control"
-                                  rows={5}
-                                  id="note_description"
-                                  placeholder="Write your question"
-                                  defaultValue={""}
-                                  value={this.state.data.note_description}
-                                  name="note_description"
-                                  id="note_description"
-                                  onChange={this.onChange.bind(this)}
-                                />
-                                <span className="form-error">
-                                  {this.state.error.note_description}
-                                </span>
-                              </div>
-                              <div className="notesSaveColl">
-                                <button
-                                  type="button"
-                                  onClick={this.onSubmit}
-                                  className="btn btn-primary mb-2"
-                                >
-                                  Save Note
-                                </button>
-                              </div>
+                    </div>
+                    <div id="notesTab" className="tab-pane fade">
+                      <div className="liveNotesTab">
+                        <div className="audienceTitle">
+                          <h3>My Notes</h3>
+                        </div> 
+                        <div className="liveNotesSave">
+                          <div className="liveNotesBox">
+                            <div className="liveNotesTitle">
+                              <input type="text" className="form-control" id placeholder="Title" />
+                            </div>
+                            <div className="liveNotesDescription">
+                              <textarea className="form-control" rows={5} id="comment" placeholder="Write your question" defaultValue={""} />
+                            </div>
+                            <div className="notesSaveColl">
+                              <button type="submit" className="btn btn-primary mb-2">Save Note</button>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>  
               </div>
             </div>
           </div>
-          <Footer />
           {/* End Inner Sec */}
         </div>
       </>
