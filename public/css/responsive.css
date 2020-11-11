@@ -1,0 +1,760 @@
+/*for all resolution*/
+
+.profileSaveButton .saveContNew {
+	margin-top: 30px;
+}
+
+.nicescroll-rails {
+	right: 0 !important;
+	left: unset !important;
+}
+
+body .cc1-chat-win-conver-wrap .cc1-chat-win-conver-list-wrap {
+	padding: 10px 0;
+}
+
+.errorMsg {
+	color: #d03e3e;
+	font-size: 12px;
+	margin-top: 8px;
+	display: block;
+}
+
+.regBlock a:hover {
+	color: #fff;
+}
+
+.welcmQuesBlock h3.questH3 span.iIcon {
+	display: none;
+}
+
+.welcome3Filed .signupError_msg {
+	background: transparent;
+	margin-top: 25px;
+}
+
+.admin-comet-chat .unified .cc1-chat-win-inpt-box-sticky .cc1-chat-win-inpt-attach {
+	top: -3px;
+}
+
+.admin-comet-chat .unified .cc1-chat-win-inpt-icon-wrap {
+	top: -4px;
+}
+
+.frontFullChat .unified .cc1-chat-win-conver-wrap {
+	border: 0;
+}
+
+body .frontFullChat .unified .cc1-chat-win-inpt-box.selectable-text {
+	padding: 10px 50px 10px 56px;
+	min-height: 40px;
+	font-size: 10px;
+	background: #fff;
+	line-height: 49px;
+}
+
+body .admin-comet-chat .unified .cc1-chat-win-inpt-box.selectable-text {
+	padding: 10px 90px 10px 70px;
+	min-height: 54px;
+	font-size: 14px;
+	background: #fff;
+	line-height: 42px;
+}
+
+body .admin-comet-chat .cc1-chat-win-conver-wrap {
+	background: rgba(0, 3, 55, 0.7);
+	margin-top: 20px;
+	border: 1px solid #001d66;
+	min-height: 370px;
+}
+
+.admin-comet-chat {
+	width: 100%;
+	padding-right: 0 !important;
+}
+
+.siteInnerHeader,
+.headSetIcon span.setICon {
+	height: 70px;
+}
+
+.frontFullChat .unified .ccl-chat-center-panel .cc1-chat-win-inpt-ext-wrap {
+	margin-top: 12px;
+}
+
+div#wrapper.contentSection {
+	padding-top: 84px;
+}
+
+.siteLeftBarInner .sideBarNav {
+	height: calc(100% - 0px);
+}
+
+.loginInner input,
+.loginInner select {
+	text-align: left;
+}
+
+.loginInner .errorMsg {
+	margin-top: 6px;
+	text-align: left;
+}
+
+body .siteFooter {
+	display: flex;
+	justify-content: space-between;
+	padding: 12px 20px;
+	position: relative;
+	border-top: 0;
+	width: 60%;
+	margin: 30px auto 0;
+}
+
+body .frontFullChat {
+	height: calc(100vh - 100px);
+}
+
+.agendaTabContent .agendaBlock .agendaTag {
+	position: relative;
+}
+
+.agendaTag .Toastify {
+	position: absolute;
+	right: :0;
+}
+
+/*end of for all resolution*/
+@media (max-width: 1250px) {
+	.sponsorSec {
+		bottom: -31px;
+	}
+
+	.expoFeature {
+		width: 80%;
+	}
+
+	.sitePageTitle h2 span.siteSubTitle {
+		margin-top: 7px;
+	}
+}
+
+@media (max-width: 1170px) {
+
+	.demandTitleFilter {
+		display: block;
+	}
+
+	.demandFilter {
+		margin-left: -7px;
+		margin-top: 45px;
+	}
+
+}
+
+
+@media (max-width: 1070px) {
+
+	.agendaHighLightInner .sec-4Block .videoControlBtn img,
+	.dashboardVideo .videoControlBtn img {
+		width: 75px;
+	}
+
+	.expoSessionBlock {
+		padding: 0px 0px 0px 40px;
+	}
+
+	.expoFeature {
+		width: 100%;
+	}
+
+	.agendaTag ul.agendaTagUl li a {
+		font-size: 11px !important;
+	}
+
+	.earnPointList ul {
+		width: 100%;
+	}
+
+	.myPointsBlock {
+		flex-wrap: wrap;
+	}
+
+	.myPointsBlock .myPointsList {
+		width: 29%;
+		margin-bottom: 30px;
+	}
+
+	.earnPointSec p,
+	.canWinSec p {
+		width: 100%;
+		margin: 10px auto;
+	}
+
+}
+
+@media (max-width: 900px) {
+
+	.slick-track,
+	.slick-list {
+		min-width: 100% !important;
+		width: 100% !important;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.socialFeedsSec .getFeedsBlock {
+		width: 50%;
+	}
+}
+
+@media (max-width: 991px) {
+	.frontFullChat .unified {
+		position: static;
+		display: block;
+		padding-right: 30px;
+	}
+
+	.frontFullChat .unified .ccl-left-panel {
+		min-width: 100% !important;
+		margin-bottom: 30px;
+	}
+
+	div#page-content-wrapper {
+		padding: 0 20px;
+	}
+
+	.chatWithAdminPage {
+		flex-wrap: wrap;
+	}
+
+	.chatWithAdminPage .chatWithAdmin {
+		width: 100%;
+		padding-right: 0;
+	}
+
+	.helpUserRight {
+		min-width: 100%;
+	}
+
+	.worldCountriesBlock .countryBlock {
+		width: 50%;
+		padding: 60px 0;
+		min-height: auto;
+	}
+
+	.exhibitorsDropBox ul li {
+		width: 100%;
+	}
+
+	.welcomeProfilePage-2 .welcomeProInner {
+		padding: 0 0;
+	}
+
+	.sitePageTitle {
+		padding-left: 25px;
+	}
+
+	.worldCountriesBlock .countryBlock:last-child,
+	.worldCountriesBlock .countryBlock:nth-child(3) {
+		padding-top: 0;
+	}
+
+	.myPointsBlock .myPointsList {
+		width: 27%;
+	}
+
+	.singleAgenSec-4 {
+		flex-wrap: wrap;
+	}
+
+	.singleAgenSec-4 .singleAgenVdoChtSec {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.singleAgenSec-4 .singleAgenChat {
+		width: 100%;
+		margin-left: 0;
+		margin-top: 30px;
+	}
+
+	.errorMsg {
+		font-size: 12px;
+		color: #d03e3e;
+		margin-top: 13px;
+		display: block;
+	}
+
+	.agendaImage img {
+		width: 100%;
+		height: 230px;
+	}
+
+	.demandFilter {
+		flex-wrap: wrap;
+	}
+
+	.demandFilter .filterBtn {
+		margin-bottom: 12px;
+		min-width: 50%;
+	}
+
+	.expoFeatureNetwork {
+		display: block;
+	}
+
+	.sponsorSec span.sponsorName {
+		color: #fff;
+		font-size: 11px;
+	}
+
+	.sponsorSec h4 {
+		font-size: 9px;
+	}
+
+	.expoNetwork {
+		width: 100%;
+		padding-left: 30px;
+		padding-top: 70px;
+	}
+
+	.innerContentBlock {
+		padding-right: 0;
+		padding-left: 5px;
+
+	}
+
+	.myPointsBlock .myPointsList {
+		width: 28.5%;
+		margin-bottom: 30px;
+	}
+
+	.helpDeskChat {
+		flex-wrap: wrap;
+	}
+
+	.helpDeskChat .helpChatLeft,
+	.helpDeskChat .helpUserRight {
+		min-width: 100%;
+		width: 100%;
+
+	}
+
+	.admin-comet-chat {
+		width: 100%;
+		padding-right: 0;
+	}
+
+	body .siteFooter {
+		margin-left: auto;
+		margin-right: unset;
+	}
+
+	body .siteFooter {
+		width: 100%;
+		justify-content: flex-end;
+	}
+
+	.footerPowerLogo {
+		margin: 0 20px;
+	}
+
+	.siteLeftBarInner .sideBarNav {
+		height: calc(100% - 20px);
+	}
+}
+
+@media (max-width: 767px) {
+	.filterVideoSec .demandVideoBlock {
+		width: 50%;
+	}
+
+	body .siteFooter {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	body .siteFooter {
+		width: 100%;
+		justify-content: center;
+	}
+
+	body .siteFooter {
+		width: 100%;
+
+	}
+
+	.frontFullChat .unified {
+		padding-left: 25px;
+	}
+
+	.myPointsBlock .myPointsList {
+		width: 43.5%;
+		margin-bottom: 30px;
+	}
+
+	.welcome3Inner {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.pollsQuestionPage {
+		background: rgba(0, 3, 55, 0.7);
+		padding: 40px 0px;
+	}
+
+	.cc1-chat-win-user-name-wrap {
+		width: calc(100% - -10px) !important;
+	}
+
+	.cc1-chat-win-user .cc1-chat-win-user-name-wrap {
+		margin: 0 0 0 17px;
+	}
+
+	.cc1-left-panel-trigger {
+		display: block;
+		margin-right: 4px;
+	}
+}
+
+
+@media (max-width: 575px) {
+	.welcome3Text h3 {
+		font-size: 19px;
+	}
+
+	body .cc1-chat-win-rcvr-row {
+		max-width: 100%;
+	}
+
+	.welcomeProInner {
+		display: block;
+		width: 100%;
+	}
+
+	.welcomeQuestionLeft {
+		width: 100%;
+		padding-left: 0px;
+	}
+
+	.welcomeQuestionRight {
+		width: 100%;
+		padding-left: 0px;
+	}
+
+	.myPointsBlock .myPointsList {
+		width: 45%;
+		margin: 10px;
+	}
+
+	.profileSaveButton .saveContNew {
+		text-align: center;
+	}
+
+	.adminNameSec p {
+		font-size: 13px;
+		padding: 0 20px;
+	}
+
+	.welcmQuesBlock {
+		margin-bottom: 30px;
+	}
+
+	.expoSecImage {
+		width: 100%;
+	}
+
+	.expoSecName {
+		width: 100%;
+		padding: 15px 15px 15px 15px;
+
+	}
+
+	.agendaTag ul.agendaTagUl li a {
+		font-size: 14px !important;
+		width: 100%;
+		text-align: center;
+		display: block;
+		margin-bottom: 8px;
+		padding: 10px;
+	}
+
+	.agendaCheckSec {
+		display: block;
+	}
+
+	.singleAgenBtn {
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.agendaTag ul.agendaTagUl {
+		position: relative;
+		display: block;
+	}
+
+	.expoSrNo {
+		top: 60%;
+	}
+
+	.expoSecName .sessionTime {
+		margin-top: 15px;
+	}
+
+	.agendaTag {
+		margin-top: 15px;
+	}
+
+	.expoSessionBlock {
+		padding: 0;
+	}
+
+	.expoSessionBlock {
+		display: block;
+
+	}
+
+	.expoSessionBlock {
+		margin-left: 0px;
+
+	}
+
+	.sponsorSec {
+		bottom: -37px;
+	}
+
+	.welcomeProInner .welProfileLeft,
+	.welcomeProInner .welProfileDetail {
+		width: 100%;
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.followAgenda {
+		position: absolute;
+		top: -42px;
+		right: 6px;
+	}
+
+	.expoSessionBlock {
+		margin-bottom: 60px;
+	}
+
+	.expoNetwork {
+		padding-left: 0;
+	}
+
+	.innerContentBlock {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.expoFeature {
+		padding-right: 0;
+	}
+
+	.sitePageTitle {
+		padding-left: 20px;
+	}
+
+	.expoSrNo {
+		top: -11px;
+		right: -28px;
+		left: unset;
+		width: 40px;
+		height: 40px;
+
+	}
+
+	.brandLogoSec li {
+		width: 33.33%;
+	}
+
+	.leaderboardBlock ul li {
+		width: 100%;
+		padding: 0;
+
+	}
+
+	.contactAdmin {
+		margin-top: 30px;
+	}
+
+	.liveNowSecInner {
+		margin-bottom: 20px;
+		padding-bottom: 0;
+	}
+
+	.pollsQuestionPage .pollsQBlock .agendaTimeImage .agendaTimeTag {
+		width: 100%;
+		padding: 20px;
+		font-size: 13px;
+	}
+
+	.writeReview button.writeReviewBtn {
+		text-align: center;
+		width: 100%;
+	}
+
+	body .pollsQuestionPage {
+		padding: 0px 0px;
+	}
+
+	.agendaTag .liveConfrence {
+		text-align: center;
+	}
+
+	.liveNowSecInner {
+		margin-bottom: 20px;
+		padding-bottom: 30px;
+	}
+
+	body .cc1-chat-win-user-name-wrap {
+		width: calc(100% - 10px) !important;
+	}
+}
+
+@media (max-width: 540px) {
+	.pollsQuestionPage .pollsQBlock .agendaTimeImage .agendaTimeTag {
+		width: 100%;
+		padding: 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.footerPowerLogo {
+		margin: 0 10px;
+	}
+
+	body .admin-comet-chat .unified .cc1-chat-win-inpt-box.selectable-text {
+		line-height: 36px !important;
+		font-size: 11px;
+		padding: 10px 48px 10px 50px;
+	}
+
+	.worldCountriesBlock {
+		display: block;
+	}
+
+	.welcomeProHead p {
+		font-size: 14px;
+		font-weight: 400;
+		margin: 6px 0 10px;
+		padding: 0 20px;
+	}
+
+	.welcomeProfilePage-2 .profileSaveButton .profilePages li {
+		width: 100%;
+		text-align: left;
+		border: 0;
+		margin-bottom: 19px;
+	}
+
+	.profileInnerPages {
+		padding-top: 20px;
+	}
+
+	.notesHead h3 {
+		font-size: 15px;
+		font-weight: 600;
+	}
+
+	.faqSectionBlock .accordion {
+		padding: 16px 17px;
+		text-align: left;
+	}
+
+	.faqPage {
+		background: rgba(0, 3, 55, 0.7);
+		padding: 40px 15px;
+	}
+
+	.contactAdmin .contactAdminBtn {
+		font-size: 13px;
+		font-weight: 600;
+	}
+
+	.loginMidSec .loginLeftText {
+		text-align: left;
+	}
+
+	ul.questPointUl {
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		padding: 0 25px;
+	}
+
+	.pointBlockBlock {
+		margin-top: 10px;
+	}
+
+	ul.questPointUl li {
+		list-style: none;
+		width: 100%;
+	}
+
+	ul.questPointUl li .questPointBlock {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	.myPointsBlock .myPointsList {
+		width: 100%;
+		margin: 10px;
+	}
+
+	.filterVideoSec .demandVideoBlock {
+		width: 100%;
+	}
+
+	body .worldCountriesBlock .countryBlock {
+		width: 100%;
+		padding: 20px 0;
+		min-height: unset;
+	}
+
+	.demandFilter .filterBtn {
+		min-width: 100%;
+	}
+
+	.worldCountriesBlock .countryBlock:last-child,
+	.worldCountriesBlock .countryBlock:nth-child(3) {
+		padding-top: 60px;
+	}
+
+	.worldCountriesBlock {
+		padding-bottom: 60px;
+	}
+
+
+	.profileSaveButton .saveContNew {
+		margin-top: 30px;
+		width: 100%;
+		min-width: 100%;
+	}
+
+	.expoSecName {
+		padding: 15px 15px 15px 25px;
+	}
+
+	.exhibitorsTilteDrop {
+		display: block;
+	}
+
+	.exhibitorsDropBox ul li {
+		list-style: none;
+		margin-left: 0;
+		width: 100%;
+		margin-right: 15px;
+		margin-top: 10px;
+	}
+
+	.exhibitorsDropBox ul {
+		display: block;
+	}
+
+	body .admin-comet-chat .unified .cc1-chat-win-inpt-box.selectable-text {
+		line-height: 23px;
+	}
+
+}

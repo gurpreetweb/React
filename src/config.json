@@ -1,0 +1,10 @@
+{
+    "BASE_URL": "https://admin.illumeetvirtual.com", 
+    "RECORD_URL": "https://recording-event.hospitalityliving.com", 
+    "EVENT_ID": "5f240a4c64fff77188c7ca80",
+    "COMMET_CHAT":{
+        "APP_ID" : "22552e54eb4c145",
+        "API_KEY":"cc47c0b685b1dba342a3da75e6d1fe3626e33762",
+        "REGION" :"us"
+    } 
+}

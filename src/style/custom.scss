@@ -1,0 +1,72 @@
+.max-width{
+    width:100%
+}
+.signupError_msg{
+      text-align: center;
+      margin: 15px 0 0 0;
+      color: $errorColor;
+      font-weight: 600
+}
+.errorMsg{
+    color:$errorColor
+    
+}
+div#page-content-wrapper{
+    width: 100%;
+}
+
+// .sideBarNav {
+//     -ms-overflow-style: none;  /* Internet Explorer 10+ */
+//     scrollbar-width: none;  /* Firefox */
+// }
+.sideBarNav::-webkit-scrollbar { 
+    background: blue;
+    width: 2%;
+    // display: none;  /* Safari and Chrome */
+}
+.sideBarNav::-webkit-scrollbar-thumb { 
+    background: rgb(255, 255, 255);
+    width: 1%;
+}
+.sideBarNav::-webkit-scrollbar-track { 
+    background: blue;
+    width: 2%;
+    // display: none;  /* Safari and Chrome */
+}
+.attendiesBlock {
+    width: 30%;
+    float: left;
+    max-height: 104px;
+}
+.profileSaveButton{
+    padding-top:50px !important;
+}
+#load-more{
+    width: fit-content;
+    height: 30px;
+    margin: 9px 0 0 0;
+    border: white;
+}
+.feedsImg img{
+    width: 100%;
+}
+.unified{
+    display: flex;
+    flex-direction: row;
+    position: relative !important;
+    height: 100%;
+    background: aliceblue;
+    width: 100%;
+    min-height: 500px;
+    .cc1-chat-win-inpt-ext-wrap {
+        top: 300px;
+    }
+}
+
+.uploadProImage input#uploadImg {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    height: 40px;
+    cursor: pointer;
+}

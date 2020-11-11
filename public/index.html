@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <meta name="theme-color" content="#000000" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Elevate</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap core CSS -->
+
+    <!-- ====================Enkindle theme==================== -->
+    <link href="%PUBLIC_URL%/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="%PUBLIC_URL%/css/simple-sidebar.css" rel="stylesheet">
+    <!-- <link href="%PUBLIC_URL%/css/custom.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/css/slick-theme.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous">
+    <!-- <link href="%PUBLIC_URL%/css/responsive.css" rel="stylesheet"> -->
+    <!-- ====================Enkindle theme==================== -->
+
+    <!-- ===========================theme 2==================== -->
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="%PUBLIC_URL%/elevate-theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- Custom styles for this template -->
+    <!-- <link href="%PUBLIC_URL%/elevate-theme/css/simple-sidebar.css" rel="stylesheet" />
+  <link href="%PUBLIC_URL%/elevate-theme/css/style.css" rel="stylesheet" />
+  <link href="%PUBLIC_URL%/elevate-theme/css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/elevate-theme/css/slick.css">
+  <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/elevate-theme/css/slick-theme.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"> -->
+    <!-- ===========================theme 2==================== -->
+
+    <!-- <link href="%PUBLIC_URL%/vendor/css/simple-sidebar.css" rel="stylesheet">
+    <link href="%PUBLIC_URL%/vendor/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/vendor/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/vendor/css/slick-theme.css">
+    <link href="%PUBLIC_URL%/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpP_GqrDrJlC3zSKGb7SsCtQDRUb-kfRw&libraries=places"></script>
+
+    <!-- commet-chat -->
+    <!-- <script src="~/node_modules/@cometchat-pro/chat/CometChat.js" type="text/javascript"></script> -->
+    <!-- <script type="text/javascript" src="https://unpkg.com/@cometchat-pro/chat@2.0.12/CometChat.js"></script> -->
+    <!-- commet-chat -->
+  </head>
+
+  <body id="body">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+    <script src="%PUBLIC_URL%/vendor/jquery/jquery.min.js"></script>
+    <script src="%PUBLIC_URL%/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+      $(document).ready(function () {
+        $("#menu-toggle").click(function (e) {
+          e.preventDefault();
+          $("#wrapper").toggleClass("toggled");
+        });
+      });
+    </script>
+    <!-- Start leftbar Toggle Script -->
+    <script>
+      $(document).ready(function () {
+        $(".headerToggleMenu").click(function () {
+          $(".siteLeftBar").toggleClass("toggleLeftNav");
+        });
+      });
+    </script>
+    <!-- End leftbar Toggle Script -->
+    <!-- Start custom scroll Script -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="%PUBLIC_URL%/vendor/jquery/jquery.nicescroll.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var nice = $("this").niceScroll(); // The document page (body)
+        $(".boxscroll").niceScroll({ cursorborder: "", cursorcolor: "#ccc" }); // First scrollable DIV
+      });
+    </script>
+    <!-- End custom scroll Script -->
+    <!-- Start video controls -->
+    <script>
+      $(document).ready(function () {
+        var video1 = document.getElementById("ban_video");
+        video1.currentTime = 0;
+        $(".mute-bt").click(function () {
+          if ($(this).hasClass("stop")) {
+            var ban_video = document.getElementById("ban_video");
+            $("#ban_video").prop("muted", false);
+            $(this).removeClass("stop");
+          } else {
+            var ban_video = document.getElementById("ban_video");
+            $("#ban_video").prop("muted", true);
+            $(this).addClass("stop");
+          }
+        });
+
+        $(".play-bt").click(function () {
+          $(".play-bt").hide();
+          $(".pause-bt").show();
+          var ban_video = document.getElementById("ban_video");
+          if ($(".stop-bt").hasClass("active")) {
+            ban_video.currentTime = 0;
+          }
+          ban_video.play();
+        });
+        $(".pause-bt").click(function () {
+          $(".play-bt").show();
+          $(".pause-bt").hide();
+          $(".pause-bt").addClass("active");
+          $(".stop-bt").removeClass("active");
+          var ban_video = document.getElementById("ban_video");
+          ban_video.pause();
+        });
+        $(".stop-bt").click(function () {
+          $(".play-bt").show();
+          $(".pause-bt").hide();
+          $(".pause-bt").removeClass("active");
+          $(".stop-bt").addClass("active");
+          var ban_video = document.getElementById("ban_video");
+          ban_video.currentTime = 0;
+          ban_video.pause();
+        });
+      });
+    </script>
+    <!-- End video controls -->
+    <style></style>
+    <!-- Start Dashboard Attendies -->
+    <script type="text/javascript">
+      $(document).on("ready", function () {
+        $(".regular").slick({
+          dots: true,
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        });
+      });
+    </script>
+    <script
+      src="%PUBLIC_URL%/vendor/jquery/slick.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <!-- End Dashboard Attendies -->
+    <script>
+      jQuery(document).ready(function ($) {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 50) {
+            $("#backToTop").fadeIn("slow");
+          } else {
+            $("#backToTop").fadeOut("slow");
+          }
+        });
+        $("#backToTop").click(function () {
+          $("html, body").animate({ scrollTop: 0 }, 500);
+          return false;
+        });
+      });
+    </script>
+
+    <!-- Start leftbar Toggle menu Script -->
+    <script>
+      $(document).ready(function () {
+        $(".headerToggleMenu").click(function () {
+          $(".siteLeftBar").toggleClass("toggleLeftNav");
+        });
+      });
+    </script>
+    <!-- End leftbar Toggle menu Script -->
+  </body>
+
+  <script>
+    $(document).ready(function () {
+      $(".registration-form fieldset:first-child").fadeIn("slow");
+
+      $('.registration-form input[type="text"]').on("focus", function () {
+        $(this).removeClass("input-error");
+      });
+      // next step
+      $(".registration-form .btn-next").on("click", function () {
+        var parent_fieldset = $(this).parents("fieldset");
+        var next_step = true;
+        parent_fieldset
+          .find('input[type="text"],input[type="email"]')
+          .each(function () {
+            if ($(this).val() == "") {
+              $(this).addClass("input-error");
+              next_step = false;
+            } else {
+              $(this).removeClass("input-error");
+            }
+          });
+        if (next_step) {
+          parent_fieldset.fadeOut(400, function () {
+            $(this).next().fadeIn();
+          });
+        }
+      });
+      // previous step
+      $(".registration-form .btn-previous").on("click", function () {
+        $(this)
+          .parents("fieldset")
+          .fadeOut(400, function () {
+            $(this).prev().fadeIn();
+          });
+      });
+      // submit
+      $(".registration-form").on("submit", function (e) {
+        $(this)
+          .find('input[type="text"],input[type="email"]')
+          .each(function () {
+            if ($(this).val() == "") {
+              e.preventDefault();
+              $(this).addClass("input-error");
+            } else {
+              $(this).removeClass("input-error");
+            }
+          });
+      });
+    });
+  </script>
+</html>

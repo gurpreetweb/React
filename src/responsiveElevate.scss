@@ -1,0 +1,609 @@
+.app_elevate{
+    @media only screen and (max-width: 1199px) {
+        section.login {
+            margin: 50px auto;
+            max-width: 800px;
+            width: 100%;
+            transform: none;
+            top: 0;
+            left: 0;
+            position: relative;
+        }
+        }
+        @media(max-width: 1299px){
+            .orderCompleteSec{
+                padding: 50px 0px;
+                height: calc(100vh - 150px);
+            }
+        }
+        @media(max-width: 1050px){
+            .sponsorBrands .slick-slide img{
+                max-width: 130px;
+                height: auto;
+                margin:auto;
+            }
+        }
+        @media(max-width: 767px){
+ 
+            .orderCompInner{
+                width: 90%;
+                    padding: 30px 15px;
+            }
+             .orderCompleteSec {
+    height: 100%;
+    padding: 20px 0;
+}
+.orderCompButton button.orderSummitBtn {
+    margin-bottom: 20px;
+}
+.orderCompSummit {
+    flex-direction: column;
+}
+.orderCompSummit {
+    margin-bottom: 30px;
+}
+.orderCompEvent h3 {
+    font-size: 18px;
+    line-height: 20px;
+}
+.orderCompEvent p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+.orderCompLogo {
+    width: 100%;
+    padding: 18px 0;
+}
+.orderCompEvent {
+    padding: 10px 0;
+    text-align: center;
+}
+.orderCompleteHead {
+    flex-direction: column;
+}   
+}
+@media(max-width: 600px){
+    .welcomeProInner {
+    flex-wrap: wrap;
+}
+.welcomeProInner .welProfileLeft {
+    width: 100%;
+    padding-right: 0;
+}
+.welcomeProInner .welProfileDetail {
+    width: 100%;
+    padding-left: 0;
+}
+
+}
+        @media only screen and (max-width: 1023px) {
+        .innerContentBlock {
+            margin-bottom: 0px;
+        }
+        footer.siteFooter {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+            span.secTopRightBdr, span.secbtmLeftBdr {
+                display: none;
+            }
+            .eleDashVideo{
+               padding: 0; 
+            }
+            .innerContentBlock{
+                padding: 20px 0px 20px 20px;
+            }
+            div#sidebar-wrapper{
+                top: 0;
+                margin-right: 0;
+            }
+            .siteHeader nav.navbar{
+                padding: 10px;
+            }
+        }
+        @media only screen and (max-width: 991px) {
+            section.gold-sponsors .gold-slider .slick-prev::before{
+                left: 0;
+            }
+            section.gold-sponsors .gold-slider .slick-next::before{
+                right: 0;
+            }
+            .dashBoardTtile h2:after{
+                width: 50%;
+            }
+            span.sponsorTopBdr,
+            span.sponsorbtmBdr,
+            span.sponsorTopBdr,
+            span.sponsorbtmBdr,
+            .txt-info:after,
+            span.secTopRightBdr,
+            span.secbtmLeftBdr{
+                display: none;
+            }
+        
+        }
+        
+        @media only screen and (max-width: 767px) {
+        .videoWelcomeText h3 {
+            text-align: left;
+        }
+        .forgotPassword .loginInner {
+            width: 70%;
+        }
+        .txt-info {
+            padding: 20px 0px 0px;
+        }
+        .registrationDetail footer.siteFooter {
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .arrowLogo img
+        {
+            width: 240px;
+        }
+        .login-logo img{
+            width: 150px;
+        }
+        .login-logo {
+           padding-top: 10px;
+           text-align: center;
+        }
+        .signupStep2Btn button.btn-previous{
+            margin-bottom: 0;
+        }    
+        section.login .box-wrap {
+            flex-wrap: wrap;
+        }
+        section.login .login-box {
+            margin-bottom: 20px;
+        }
+        #headProfile {
+            position: relative;
+        }
+        div#page-content-wrapper {
+            order: 2;
+        }
+        span.rightToggleHead {
+            display: none;
+        }
+        .siteInnerHeader button#menu-toggle {
+            font-size: 0;
+            width: 30px;
+            border: 0;
+            background: #ff096a;
+            height: 4px;
+            position: absolute;
+            display: block;
+            padding: 0;
+            right: 0;
+            border-radius: 0;
+        }
+        .siteInnerHeader button#menu-toggle:after {
+            content: "";
+            position: absolute;
+            height: 4px;
+            width: 40px;
+            background: #ff096a;
+            top: -12px;
+            left: -10px;
+        }
+        .siteInnerHeader button#menu-toggle:before {
+            content: "";
+            position: absolute;
+            height: 4px;
+            width: 40px;
+            background: #ff096a;
+            bottom: -12px;
+            left: -10px;
+        }
+        .siteInnerHeader button.navbar-toggler {
+            padding: 0 4px;
+            border: 0;
+        }
+        .headerSocial {
+            margin-right: 30px;
+        }
+        .siteInnerHeader button#menu-toggle:focus {
+            box-shadow: none;
+        }
+            
+        .elevateExpBox h3 {
+            font-size: 23px;
+        }
+        .innerContentBlock {
+            padding: 20px 20px 30px;
+        }
+        .eleDashVideo {
+            padding-top: 0px;
+        }
+        .dashVideoAgenda, .eventBoothSec, .sponsorSec, section.elevateExpSec, section.speSecLouSec {
+            padding-right: 0px;
+        }
+        .headerLogo img {
+            width: 155px;
+        }
+        div#wrapper.contentSection {
+            padding-top: 63px;
+            overflow: hidden;
+        }
+        div#sidebar-wrapper {
+            top: 0px;
+            margin-right: 20px;
+        }
+        div#sidebar-wrapper.toggleLeftNav {
+            display: block;
+            position: absolute;
+            right: 0;
+            z-index: 2;
+            top: 63px;
+            min-width: 220px;
+            height: 100%;
+            margin-right: 0;
+        }
+        div#sidebar-wrapper.toggleLeftNav .siteLeftBarInner {
+            background: #1b1e2f;
+        }
+        .siteHeader nav.navbar {
+            padding: 10px 20px 10px 15px;
+        }
+        .toggleLeftNav ul li span.sideBarText {
+            display: block;
+        }
+        section.gold-sponsors .container{
+            background: none;
+        }
+        section.gold-sponsors .container{
+            background: none;
+        }
+        
+        .sessVideoInner .sessVideoBox {
+            width: 33.3%;
+        }
+        .sessVideo video#ban_video {
+            height: 165px;
+        }
+        .loungesInner {
+            flex-wrap: wrap;
+        }
+        .loungesInner .loungesBox {
+            width: 48%;
+            margin: 0 5px 20px;
+        }
+        section.loungesSec, .meetingRoomSec {
+            margin-bottom: 0px;
+        }
+        .dashBoardTtile h2 {
+            padding-left: 0;
+        }
+        .loginInner{
+            width: 80%;
+        }
+        .sideBarNav li a.list-group-item {
+            justify-content: left;
+        }
+        span.sideBarIcon {
+            order: 1;
+        }
+        .sideBarNav li a.list-group-item span.sideBarText {
+            order: 2;
+            display: block;
+            width: 100%;
+            padding-left: 10px;
+        }
+        
+        
+        }
+        
+        
+        @media only screen and (max-width: 574px) {
+        	.speakerColl button.slick-arrow:before {
+    top: 50%;
+    transform: translateY(-50%);
+}
+        .arrowLogo img {
+            width: 170px;
+        }
+        .forgotPassword .loginInner {
+            width: 90%;
+        }
+        .sponsorPopBody {
+            padding: 65px 0 0px;
+        }
+        .goldSliderInner h3 {
+            padding-left: 0px;
+        }
+        .sponsorPopContent {
+            padding: 0px;
+        }
+        .signupQuest .switch {
+            min-width: 60px;
+            margin-bottom: 0;    
+        }
+        .signupQuest .form-group h3 {
+            font-size: 15px;
+            min-width: unset;
+        }
+        .signupQuest .form-group {
+            align-items: center;
+        }
+        footer.siteFooter {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .innerContentBlock {
+            padding: 20px 10px 30px;
+        }
+        .loungesInner .loungesBox {
+            width: 100%;
+            margin: 0 5px 20px;
+            min-height: 130px;
+        }
+        .sponsorTypeTtile {
+            text-align: left;
+        }
+        .speakerColl button.slick-prev {
+            left: -35px;
+        }
+        .speakerColl button.slick-next {
+            right: -35px;
+        }
+        .speakerColl .slick-arrow {
+            width: 40px;
+        }
+        .speakerColl button.slick-prev:before {
+            left: 0;
+            top: 50%;
+        }
+        .speakerColl button.slick-next::before {
+            right: 0;
+        }
+        .speakerColl {
+            padding: 0 24px;
+        }
+        section.login .login-box {
+            max-width: 100%;
+        }
+        section.login .join-now {
+            max-width: 100%;
+        }
+        .login-logo {
+            padding-top: 10px;
+        }
+        .login-logo img {
+            width: 230px;
+        }
+        .elevateExpBox h3 span {
+            display: inline-block;
+        }
+        .elevateExpBox h3 {
+            font-size: 20px;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            width: 100%;
+            text-align: center;
+            top: 50%;
+            text-shadow: 0 3px 2px #000;
+        }
+        .dashboardVideo video.dashboardVideoMedia{
+            height: 370px;
+        }
+        .loginInner{
+            width: 90%;
+        }
+        section.login .login-box,
+        section.login .join-now{
+            width: 90%;
+        } 
+        .dashConBaner {
+            flex-direction: column;
+        }
+        .eleConAge {
+            width: 100%;
+            padding-right: 0px;
+        }
+        .eleConBanner {
+            width: 100%;
+            padding-left: 0px;
+            margin-top: 20px;
+        }
+        .agendaBnr img {
+            height: 260px;
+        }
+        .sponsorTypeTtile h3 {
+            width: 100%;
+        }
+        }
+         @media(max-width: 600px){
+             .sessVideoInner .sessVideoBox {
+            width: 50%;
+        }
+        .sessVideoInner .sessVideoBox .sessVideo .dashboardVideoMedia{
+            height: auto!important;
+            min-height: 150px;
+        }
+        .sessVideoInner{
+            display: flex;
+        }
+        }
+        @media only screen and (max-width: 480px) {
+            
+        .elevateExpBox h3 {
+            font-size: 15px;
+        }
+            .headerLogo img {
+                width: 120px;
+            }
+            #headProfile {
+                display: block;
+            }
+            .headerSocial ul li a{
+                font-size: 16px;
+            }
+            .headerSocial ul li{
+                margin-left: 10px;
+            }
+            .dashBoardTtile h2:after {
+                display: none;
+            }
+            .siteInnerHeader button#menu-toggle{
+                width: 15px;
+            }
+            .siteInnerHeader button#menu-toggle:after{
+                width: 30px;
+                left: -14px;
+            }
+            .siteInnerHeader button#menu-toggle:before{
+                width: 30px;
+                left: -14px;
+            }
+        
+            .headerSocial ul {
+                display: flex;
+                top: 14px;
+                position: relative;
+                left: -38px;
+            }
+            .siteHeader.singlePage .headerSocial ul{
+                top: 0px;
+                left: 0px;
+            }
+
+            div#sidebar-wrapper {
+                top: 10px;
+                margin-right: 20px;
+            }
+            .sessVideoInner{
+                display: block;
+                margin: 0;
+            }
+            .loungesInner {
+                margin: 0;
+            }
+            .sponsorBrands .slick-slide img {
+                width: auto;
+                margin: 0 auto;
+             
+            }
+            .sessVideoInner .sessVideoBox{
+                width: 100%;
+                padding: 0;
+            }
+            .loungesInner{
+                display: block;
+            }
+            .loungesInner .loungesBox{
+                width: 100%;
+                margin: 12px 0;
+            }
+            .dashConBaner{
+                display: block;
+            }
+            .eleConAge{
+                width: 100%;
+                padding-right: 0;
+            }
+            .eleConBanner {
+                width: 100%;
+                padding-left: 0;
+                margin-top: 20px;
+            }
+            /*popUp responsive*/
+            .txt-info h2{
+                font-size: 18px;
+            }
+            .txt-info p{
+                font-size: 12px;
+            }
+            .speakerPopBody .txt-info h3 {
+                font-size: 18px;
+            }
+        
+            /*footer*/
+            footer.siteFooter ul{
+                   display: flex;
+        max-width: 429px;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+            }
+            footer.siteFooter ul li:first-child {
+            width: 105px;
+            font-size: 12px;
+       }
+        footer.siteFooter ul li:last-child {
+            width: 165px;
+        }
+        footer.siteFooter ul li:last-child img {
+            max-width: 65px;
+        }
+            footer.siteFooter ul li{
+                text-align: center;
+               
+                padding: 4px 0;
+            }
+            footer.siteFooter ul li.footerDivider{
+                padding:0px 10px;
+            }
+            /*Dashboard 2 style*/
+            .dash-2VideoText h3{
+                font-size: 20px;
+            }
+            .meetingRoomInner .meetingVideoBox{
+                width: 100%;
+            }
+            .dashboardVideo .videoControlBtn img {
+                width: 100px;
+            }
+            /*SignUp responsive*/
+            .signupRightBox .RegRow{
+                display: block;
+            }
+            .signupRightBox .RegRow .form-group{
+                width: 100%;
+            }
+            .signupStep2Btn {
+                display: block;
+                margin-top: 20px;
+                padding-top: 30px;
+            }
+            .signupQuest .form-group {
+                position: relative;
+            }
+            .signupQuest .form-group h3 {
+                order: 2;
+            }
+            .signupQuest .switch {
+                order: 1;
+                margin-right: 20px;
+            }
+            .loginInner {
+            padding: 25px 20px 30px;
+        }
+        .signupStep2Btn button.btn {
+            display: block;
+            width: 100%;
+        }
+        .signupStep2Btn button.btn.btn-previous {
+            margin-bottom: 20px;
+        }
+        .regSubmitBtn .btn-next {
+            width: 100%;
+        }
+        }
+    
+        @media(min-width: 768px) and (max-width: 950px){
+            .elevateExpBox h3{
+             top: 50%;
+        transform: translateY(-50%);
+        font-size: 21px;
+            }
+            .sessVideoInner .sessVideoBox{
+                width: 33.3%;
+            }
+        }
+         
+        
+    }
+        
+        
+       

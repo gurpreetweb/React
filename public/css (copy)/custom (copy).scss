@@ -1,0 +1,4124 @@
+$blueColor: #2b2497;
+$darkBlue: #001d66;
+$blueHighLight: #5740eb;
+$blueTransparent: rgba(0, 3, 55, 0.7);
+$greenColor: #29f0b4;
+$whiteColor: #fff;
+$bgWhiteColor: #fff;
+$grayColor: #9e9cc8;
+$errorColor: #d03e3e;
+$blackColor: #000;
+$footerBGColor: rgba(87, 64, 235, 0.6);
+
+/*body{background-image: url(../images/bgimage.jpg);}*/
+body{background-color: transparent;font-family: 'Montserrat', sans-serif;}
+body, ul, li, p, h1, h2, h3, h4, h5, h6{margin: 0;padding: 0;}
+a:hover{text-decoration: none;}
+button:focus {
+    border: 0;
+    box-shadow: none;
+    outline: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.siteContainer {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+/*====================== Start Header ====================== */
+.sideBarToggle {
+    display: none;
+}
+.siteInnerHeader{
+    position: fixed;
+    width: 100%;
+    background: $blueColor;
+    z-index: 2;
+    height: 90px;
+}
+.siteHeader nav.navbar {
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.siteHeader .headerToggleMenu .headToggle {
+    width: 40px;
+    border: 0;
+    background: $greenColor;
+    height: 3px;
+    position: relative;
+    display: block;
+}
+.siteHeader .headerToggleMenu .headToggle:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 40px;
+    background: $greenColor;
+    top: -10px;
+    left: 0px;
+}
+.siteHeader .headerToggleMenu .headToggle:before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 40px;
+    background: $greenColor;
+    bottom: -10px;
+    left: 0px;
+}
+.siteHeader .headerToggleMenu {
+    display: block;
+    padding: 11px 0px;
+}
+
+.headerLogo {
+    margin-left: 60px;
+}
+div#headProfile {
+    display: flex;
+}
+div#headProfile {
+    display: flex;
+    align-items: center;
+}
+.headLeftContent {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.headSetIcon span.setICon {
+    background: $greenColor;
+    height: 90px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.setICon i {
+    font-size: 47px;
+    color: $darkBlue;
+}
+.headerRightContant span.virExp {
+    font-size: 24px;
+    font-weight: 600;
+    color: $whiteColor;
+    margin-right: 60px;
+}
+/*====================== Start Header Hover Element ====================== */
+.headerSettingBlock {
+    display: none;
+}
+.headSetIcon:hover .headerSettingBlock {
+    display: block;
+    position: absolute;
+    width: 430px;
+    background: $bgWhiteColor;
+    right: 0;
+    padding: 20px;
+}
+.siteCheckBox .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 27px;
+    margin-bottom: 0;
+}
+.siteCheckBox .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.siteCheckBox input:checked + .slider {
+    background-color: $darkBlue;
+}
+.siteCheckBox input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(31px);
+    background: $greenColor;
+}
+.siteCheckBox .slider.round:before {
+    border-radius: 50%;
+}
+.siteCheckBox .slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 4px;
+    bottom: 4px;
+    background-color: $grayColor;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.siteCheckBox input:checked + .slider span.checkTextYes {
+    opacity: 1;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 3px 0;
+    color: $whiteColor;
+    left: 5px;
+    position: relative;
+}
+.siteCheckBox input:checked + .slider span.checkTextNo {
+    opacity: 0;
+}
+.siteCheckBox .slider.round {
+    border-radius: 34px;
+}
+.siteCheckBox .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.siteCheckBox .slider span.checkTextYes {
+    opacity: 0;
+}
+.siteCheckBox span.checkTextNo {
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 3px 8px 3px 0;
+    color: #000026;
+}
+.settingProfileSec {
+    display: flex;
+}
+.settingProImg {
+    width: 80px;
+    border: 2px solid #fff;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.settingProImg img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+.settingProText h2.userName {
+    font-size: 20px;
+    color: $darkBlue;
+    font-weight: 600;
+}
+.settingProText p {
+    font-size: 15px;
+    color: $darkBlue;
+    font-weight: 500;
+}
+.settingProText p a {
+    color: $darkBlue;
+    font-size: 15px;
+}
+.makeProPublic {
+    display: flex;
+    align-items: center;
+}
+.settingProText {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    justify-content: center;
+}
+span.makeProfileBtn {
+    margin-left: 20px;
+}
+.settingPointSec {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.settingPointSec .pointSec {
+    border: 2px solid $darkBlue;
+    border-radius: 7px;
+    text-align: center;
+    padding: 7px 10px;
+    width: 130px;
+}
+.settingPointSec .pointSec h3 {
+    color: $darkBlue;
+    font-size: 16px;
+    font-weight: 500;
+}
+.settingPointSec .pointSec p {
+    font-size: 15px;
+    font-weight: 700;
+    color: $darkBlue;
+    margin-top: 5px;
+}
+.settingNetworkBtn {
+    margin-top: 20px;
+    text-align: center;
+}
+.settingNetworkBtn a {
+    background: $darkBlue;
+    padding: 6px 0px;
+    color: $whiteColor;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px;
+    min-width: 330px;
+    display: inline-block;
+    font-size: 15px;
+}
+.settingNetworkBtn a i {
+    margin-right: 10px;
+    font-size: 19px;
+}
+.settingLikeMindSec {
+    margin-top: 15px;
+}
+.settingLikeMindSec h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: $darkBlue;
+    text-transform: uppercase;
+}
+.settingLikeMindSec h3 i {
+    font-size: 22px;
+}
+.settingLikeMindSec p {
+    font-size: 15px;
+    color: $darkBlue;
+}
+.profileChat .profileChatImg img {
+    width: 60px;
+    object-fit: cover;
+    height: 60px;
+    border-radius: 10px;
+}
+.profileChatText h3.attendeeName {
+    font-size: 15px;
+    font-weight: 600;
+    color: $darkBlue;
+}
+.profileChatText p.attendeeComp, .profileChatText p.attendeeDes {
+    font-size: 13px;
+    font-weight: 500;
+    color: $darkBlue;
+}
+.profileChatText {
+    padding-left: 10px;
+}
+.profileChat span.ChatImg {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+.profileChat {
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.profileChat:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: 0;
+}
+.settingChatSec {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.profileChat span.ChatImg svg {
+    color: $darkBlue;
+    font-size: 15px;
+}
+/*====================== End Header Hover Element ====================== */
+/*====================== End Header ====================== */
+/*====================== Start Left Sidebar Nav ====================== */
+div#sidebar-wrapper {
+    min-width: 245px;
+    min-height: unset;
+}
+.siteLeftBarInner {
+    height: calc(100vh - 100px);
+    position: fixed;
+}
+.sideBarNav li a.list-group-item {
+    color: $whiteColor;
+    background: transparent;
+    border: 0;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0px 10px 7px;
+}
+.sideBarNav li a.list-group-item:hover {
+    opacity: 0.85;
+}
+span.sideBarIcon {
+    position: relative;
+    display: flex;
+    background: $blueColor;
+    width: 58px;
+    height: 58px;
+    align-items: center;
+    justify-content: center;
+}
+li.logout span.sideBarIcon {
+    background: $greenColor;
+}
+li.logout span.sideBarIcon svg {
+    color: $whiteColor;
+}
+.sideBarIcon svg {
+    font-size: 20px;
+    color: $grayColor
+}
+#sidebar-wrapper .list-group li.active span.sideBarIcon svg {
+    color: $greenColor;
+}
+.sideBarNav li a.list-group-item span.sideBarText {
+    margin-left: 10px;
+}
+.sideBarNav ul {
+    padding-top: 10px;
+}
+.sideBarNav li.active a.list-group-item span.sideBarText {
+    color: $greenColor;
+}
+.boxscroll {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+.toggleLeftNav span.sideBarText {
+    font-size: 0;
+}
+#sidebar-wrapper.toggleLeftNav {
+    min-width: 88px;
+}
+#sidebar-wrapper.toggleLeftNav .sideBarNav {
+    width: 88px;
+}
+#sidebar-wrapper.toggleLeftNav .sideBarNav span.sideBarText {
+    font-size: 0;
+}
+.siteLeftBarInner .sideBarNav {
+    height: calc(100% - 47px);
+}
+/*====================== End Left Sidebar Nav ====================== */
+
+/*====================== Start Content Section ====================== */
+div#wrapper.contentSection {
+    padding-top: 90px;
+}
+/*====================== End Content Section ====================== */
+
+/*====================== Start Login ====================== */
+.arrowLogo {
+    margin-right: 50px;
+}
+.loginMidSec {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    margin-top: 20px;
+    min-height: calc(100vh - 200px);
+}
+.loginLeftText h3 {
+    color: $whiteColor;
+    font-size: 30px;
+    font-weight: 400;
+}
+.loginLeftText p {
+    color: $whiteColor;    
+    font-size: 32px;
+    font-weight: 600;
+}
+.arrowLogo img {
+    width: 300px;
+}
+.loginHeader {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.loginHeader .headerGreenSec {
+    width: 90px;
+    height: 90px;
+    background: $greenColor;
+}
+.loginMidSec .loginRightBox {
+    width: 100%;
+    text-align: right;
+}
+.loginMidSec .loginLeftText {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 22%;
+}
+.loginInner {
+    background: rgba(43, 36, 151, 0.5);
+    padding: 80px 60px 50px;
+    width: 50%;
+    display: inline-block;
+}
+.loginInner h4 {
+    color: $whiteColor;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 400;
+    text-align: left;
+}
+.dividerOr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+.dividerOr span.dividerLine {
+    height: 1px;
+    background: $greenColor;
+    display: block;
+    width: 50%;
+}
+.dividerOr span.dividerText {
+    color: $greenColor;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0 20px;
+}
+.loginSubmitBtn .submitBtn {
+    background: $greenColor;
+    border: 0;
+    color: $blueColor;
+    padding: 7px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    min-height: 43px;
+    border-radius: 7px;
+}
+.loginSubmitBtn {
+    text-align: right;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+}
+.poweredByBlock {
+    padding: 30px 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.poweredByBlock span.powerText {
+    color: $whiteColor;
+    font-size: 13px;
+    margin-right: 10px;
+}
+.notRegBlock {
+    margin-top: 70px;
+    text-align: center;
+}
+.notRegBlock h4 {
+    font-weight: 500;
+    text-align: center;
+}
+.notRegBlock p {
+    color: $whiteColor;
+    font-size: 16px;
+    line-height: 21px;
+}
+.regBlock a {
+    background: $blueColor;
+    padding: 8px 40px;
+    color: $whiteColor;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 500;
+    min-height: 43px;
+}
+.regBlock {
+    margin-top: 40px;
+}
+.loginInner .form-control {
+    min-height: 45px;
+    background: #eee;
+    font-size: 14px;
+    border-radius: 7px;
+}
+.loginInner .form-group {
+    margin-bottom: 20px;
+}
+.loginSubmitBtn .forgetPass {
+    color: $greenColor;
+    font-size: 14px;
+    font-weight: 500;
+}
+/*====================== End Login ====================== */
+/*====================== Start Signup ====================== */
+.signupRightBox .loginInner {
+    width: 55%;
+}
+.signupLeftText img {
+    width: 370px;
+}
+.signupRightBox .RegRow {
+    display: flex;
+    margin: 0 -10px;
+}
+.signupRightBox .RegRow .form-group {
+    width: 50%;
+    padding: 0 10px;
+}
+.regSubmitBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signupRightBox input[type="text"],
+.signupRightBox input[type="email"],
+.signupRightBox input[type="date"],
+.signupRightBox select.form-control, .signupRightBox .form-control {
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+.regSubmitBtn button.btn, .signupStep2Btn .submitBtn {
+    background: $greenColor;
+    border: 0;
+    color: $blueColor;
+    padding: 7px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    min-height: 43px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.signupStep2Btn button.btn-previous {
+    background: $whiteColor;
+    border: 0;
+    color: $blueColor;
+    padding: 7px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    min-height: 43px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.signupRightBox form .form-bottom .input-error {
+    border-color: $errorColor;
+    color: $errorColor;
+}
+.signupRightBox form.registration-form fieldset {
+    display: none;
+}
+.regSubmitBtn a.alreadyAccount {
+    color: $whiteColor;
+}
+.signupQuest .form-group h3 {
+    font-size: 17px;
+    color: $whiteColor;
+    min-width: 270px;
+    text-align: left;
+}
+
+/*==== Switch button ====*/
+.signupQuest .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 27px;
+  }
+  .signupQuest .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .signupQuest .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .signupQuest .slider:before {
+      position: absolute;
+      content: "";
+      height: 19px;
+      width: 19px;
+      left: 4px;
+      bottom: 4px;
+      background-color: #989898;
+      -webkit-transition: .4s;
+      transition: .4s;
+  }
+  .signupQuest input:checked + .slider {
+      background-color: $greenColor;
+  }
+  .signupQuest input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(31px);
+      background: #000026;
+  }
+  /* Rounded sliders */
+  .signupQuest .slider.round {
+    border-radius: 34px;
+    display: flex;
+  }
+  .signupQuest .slider.round:before {
+    border-radius: 50%;
+  }
+  .signupQuest input:checked + .slider span.checkTextYes {
+      opacity: 1;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-block;
+      padding: 3px 0;
+      color: #000026;
+      left: 3px;
+      position: relative;
+  }
+  .signupQuest .slider span.checkTextYes {
+      opacity: 0;
+  }
+  .signupQuest input:checked + .slider span.checkTextNo {
+      opacity: 0;
+  }
+  .signupQuest .form-group {
+      display: flex;
+  }
+  .signupQuest span.checkTextNo {
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-block;
+      padding: 3px 8px 3px 0;
+      color: #000026;
+  }
+  .signupQuest {
+    margin-top: 10px;
+}
+.signupStep2Btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    border-top: 1px solid #fff;
+    padding-top: 50px;
+}
+/*====================== End Signup ====================== */
+/*====================== Start Dashboard-1 ====================== */
+.dashboard-1Header {
+    display: flex;
+    justify-content: space-between;
+}
+.rightSideContent {
+    display: flex;
+    align-items: center;
+}
+.dashboard-1Header .leftToggle {
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dashboard-1AnkLogo img {
+    width: 100%;
+}
+.welcomeSec {
+    position: relative;
+    height: calc(100vh - 180px);
+}
+.welcomeSecInner {
+    width: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.welcomeSecInner h3 {
+    color: $whiteColor;
+    font-size: 45px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.welcomeSecInner p {
+    color: $whiteColor;
+    font-size: 46px;
+    font-weight: 600;
+}
+/*====================== End Dashboard-1 ====================== */
+/*====================== Start Main Dashboard ====================== */
+.innerContentBlock {
+    padding-top: 30px;
+    padding-right: 50px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+div#page-content-wrapper {
+    min-height: calc(100vh - 175px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.dashboardVideoSec {
+    padding-right: 80px;
+}
+.dashboardVideo video.dashboardVideoMedia {
+    width: 100%;
+}
+.dashboardVideo:after {
+    content: "";
+    width: 93%;
+    height: 97%;
+    position: absolute;
+    right: -40px;
+    bottom: -33px;
+    border-bottom: 40px solid $greenColor;
+    border-right: 40px solid $greenColor;
+}
+.dashboardVideo {
+    position: relative;
+}
+.dashboardVideo .videoControlBtn {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+}
+.worldCountriesSec {
+    margin-top: 50px;
+    background: $blueTransparent;
+}
+.worldCountriesBlock {
+    display: flex;
+}
+.worldCountriesBlock .countryBlock {
+    width: 25%;
+    text-align: center;
+    min-height: 190px;
+    padding: 60px 0;
+}
+.countryBlock h2 {
+    font-size: 45px;
+    color: $greenColor;
+    font-weight: 700;
+}
+.countryBlock p {
+    color: $greenColor;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+}
+.dashboardSec-3 {
+    margin-top: 50px;
+}
+.dashboardSecInner {
+    display: flex;
+    margin: 0 -10px;
+}
+.sec-3Block {
+    width: 33.33%;
+    padding: 0 10px;
+}
+.articleTitle p {
+    color: $whiteColor;
+    font-size: 14px;
+}
+.articleTitle h3 {
+    font-size: 16px;
+    color: $whiteColor;
+}
+.articleTitle {
+    width: 100%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.articleImg {
+    height: 70px;
+    min-width: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.imageTitle {
+    background: $blueHighLight;
+    display: flex;
+    padding: 7px;
+    min-height: 84px;
+}
+.articleImg img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+.articleContent {
+    background: $darkBlue;
+    padding: 15px;
+    height: calc(100% - 86px);
+}
+.articleContent h2 {
+    color: $greenColor;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+.articleContent p {
+    color: $whiteColor;
+    font-size: 13px;
+}
+.dashArticleCommentSec {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.dashComments {
+    width: 60px;
+}
+.dashComments span.comments {
+    color: $whiteColor;
+    font-size: 15px;
+}
+.dashResponses span.comments {
+    color: $whiteColor;
+    font-size: 15px;
+    margin-left: 10px;
+}
+.dashResponses svg {
+    color: $blueHighLight;
+}
+.newworkDropdown {
+    display: flex;
+    align-items: center;
+}
+.alphaDropdown .custom-select {
+    height: 32px;
+    font-size: 14px;
+    padding: 0 15px;
+    border-radius: 0;
+    border: 0;
+}
+.alphaDropdown {
+    width: 100%;
+    position: relative;
+}
+.alphaDropdown:after {
+    content: "";
+    position: absolute;
+    border-right: 10px solid $darkBlue;
+    border-top: 10px solid transparent;
+    transform: rotate(45deg);
+    right: 10px;
+    top: 8px;
+}
+.newworkDropdown span.dropdowntext {
+    background: $blueHighLight;
+    height: 32px;
+    text-transform: uppercase;
+    color: $whiteColor;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+.alphaDropdown .custom-select {
+    height: 32px;
+    font-size: 16px;
+    padding: 0 15px;
+    border-radius: 0;
+    border: 0;
+    background: $greenColor;
+    font-weight: 500;
+    color: $darkBlue;
+}
+.latestNewsVideo {
+    position: relative;
+    display: flex;
+}
+.latestNewsVideo .videoControlBtn, .agendaHighLightInner .sec-4Block .videoControlBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.latestNewsVideo .dashboardVideoMedia {
+    width: 100%;
+}
+.latestNewsVideo .videoControlBtn img, .agendaHighLightInner .sec-4Block .videoControlBtn img {
+    width: 70px;
+}
+.dashboardAttendies {
+    background: $blueTransparent;
+    height: calc(100% - 32px);
+}
+.dashboardNetwork .slider {
+    width: 100%;
+    margin: 0 !important;
+}
+.dashboardNetwork .slick-current {
+  opacity: 1;
+}
+.dashboardAttendies .slick-slide {
+  margin: 0;
+}
+.dashboardAttendies .attendiesBlock .userAttendy {
+    margin: 29px 10px;
+}
+.dashboardAttendies .attendiesBlock .userAttendy img {
+    width: 100%;
+    border-radius: 50%;
+}
+.dashboardAttendies button.slick-arrow {
+    display: none !important;
+}
+.latestNewsText h3 {
+    color: $greenColor;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.latestNewsText p {
+    color: $whiteColor;
+    font-size: 13px;
+}
+.latestNewsDropdown {
+    display: flex;
+    height: 32px;
+}
+.latestNewsDropdown span.dropdowntext {
+    min-width: 170px;
+    background: $greenColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $darkBlue;
+    font-size: 16px;
+    font-weight: 600;
+}
+.latestNewsDropdown select.custom-select {
+    background: $blueHighLight;
+    color: $whiteColor;
+}
+.latestNewsDropdown .alphaDropdown:after {
+    border-right: 10px solid #fff;
+}
+.latestNewsText {
+    background: $darkBlue;
+    padding: 7px;
+    margin: 7px 0;
+}
+.agendaHighLightInner .sec-4Block .videoControlBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.agendaVideoSec {
+    position: relative;
+    display: flex;
+}
+.agendaHighLightInner .sec-4Block {
+    width: 33.33%;
+    padding: 0 10px;
+}
+.agendaHighLightInner {
+    display: flex;
+    margin: 0 -10px;
+}
+.agendaVideoSec video.dashboardVideoMedia {
+    width: 100%;
+}
+.dashboardAgendaSec {
+    background: $blueTransparent;
+    padding: 20px;
+    margin-top: 30px;
+}
+.dashBoardAgendaTitle span {
+    color: $darkBlue;
+    font-size: 18px;
+    background: $greenColor;
+    font-weight: 700;
+    display: inline-block;
+    padding: 5px 20px;
+}
+h2.dashBoardAgendaTitle {
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+.agendaVideoText {
+    background: $darkBlue;
+    padding: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+.agendaVideoText h3 {
+    font-size: 18px;
+    color: $greenColor;
+    margin-bottom: 10px;
+}
+.agendaVideoText p {
+    color: $whiteColor;
+    font-size: 13px;
+    padding-right: 15px;
+}
+.agendaVideoText span.greenDot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: $greenColor;
+    right: 0;
+    bottom: 0;
+}
+.siteFooter {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    margin-top: 30px;
+    position: relative;
+    border-top: 1px solid $darkBlue;
+}
+.footerAnkLogo img {
+    width: 100px;
+}
+.footerPowerLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footerPowerLogo span.footerPower {
+    font-size: 11px;
+    font-weight: 500;
+    color: $whiteColor;
+    margin-right: 10px;
+}
+.footerPawerLogo img {
+    width: 60px;
+}
+.footerGoTop a#backToTop {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+.footerGoTop a#backToTop svg {
+    font-size: 18px;
+    margin-left: 10px;
+}
+.footerGoTop {
+    display: flex;
+}
+/*====================== End Main Dashboard ====================== */
+/*====================== Start Live Now ====================== */
+.sitePageTitle h2 {
+    color: $whiteColor;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-left: 4px solid $greenColor;
+    padding-left: 10px;
+}
+.sitePageTitle {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.liveNowDes {
+    background: $blueHighLight;
+    padding: 10px;
+}
+.liveNowDes p {
+    color: $whiteColor;
+    font-size: 15px;
+    line-height: 22px;
+}
+.liveNowSections {
+    background:$blueTransparent;
+    padding: 40px 35px;
+}
+.liveNowSecInner {
+    border: 1px solid #fff;
+    background: $darkBlue;
+    position: relative;
+    padding: 0px 0px 0px 60px;
+    display: flex;
+    align-items: center;
+    margin-left: 45px;
+    margin-bottom: 30px;
+}
+.liveNowSecInner:last-child {
+    margin-bottom: 0;
+}
+.liveNowBlock .LiveSrNo {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: $greenColor;
+    top: 50%;
+    left: 0px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: $darkBlue
+}
+.liveNowBlock h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.liveNowBlock h2 a {
+    color: $whiteColor;
+}
+.liveNowSecInner .liveNowBlock {
+    color: $whiteColor;
+}
+.sessionTime {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+}
+.sessionTime span.timeText {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.liveNowBlock p.shortDes {
+    font-size: 14px;
+}
+.timeIcon svg {
+    font-size: 20px;
+    color: #fff;
+}
+/*====================== End Live Now ====================== */
+/*====================== Start Agenda ====================== */
+.agendaFilter .agendaFilterBtn {
+    background: #364469;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 1px solid #364469;
+    padding: 7px 10px;
+    min-width: 250px;
+    border-radius: 0;
+}
+.agendaFilter .agendaFilterBtn svg {
+    font-size: 20px;
+    margin-right: 10px;
+}
+.agendaContent .fade.active {
+    opacity: 1;
+}
+.agendaInner .agendaTab li a {
+    padding: 12px 30px 8px;
+    display: inline-block;
+    color: #525252;
+    border-bottom: 4px solid transparent;
+    font-weight: 500;
+    font-size: 16px;
+}
+.agendaInner .agendaTab li a.active {
+    border-bottom: 4px solid $greenColor;
+    font-weight: 600;
+    color: $darkBlue;
+}
+.agendaInner .agendaTab {
+    background: #eee;
+}
+.agendaContent {
+    background: $blueTransparent;
+    padding: 40px 35px;
+}
+.agendaTabContent .agendaBlock {
+    width: 100%;
+}
+.agendaBlock h2 {
+    display: flex;
+    justify-content: space-between;
+}
+.agendaTag ul.agendaTagUl {
+    display: flex;
+}
+.agendaTag ul.agendaTagUl li {
+    list-style: none;
+    margin-right: 10px;
+}
+.agendaTagUl li:last-child {
+    margin-right: 0 !important;
+}
+.agendaTag ul.agendaTagUl li a {
+    background: #364469;
+    color: #fff;
+    font-size: 13px;
+    padding: 5px 15px;
+    display: inline-block;
+    border-radius: 0px;
+    font-weight: 500;
+}
+.agendaTag ul.agendaTagUl li.intermediateBtn a {
+    background: $greenColor;
+    color: $darkBlue;
+}
+.agendaTag {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.liveConfrence a {
+    background: $blueHighLight;
+    padding: 9px 20px 9px 28px;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    border-radius: 17px;
+}
+.liveConfrence a span.playIcon {
+    background: $blueHighLight;
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    top: -5px;
+    left: -17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.agendaTimeImage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.agendaTimeTag {
+    padding: 15px 15px 15px 0;
+    width: 70%;
+}
+.agendaImage img {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+.agendaImage {
+    width: 30%;
+}
+.followAgenda span.agendaLike {
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+}
+/*====================== End Agenda ====================== */
+/*====================== Start Single Agenda ====================== */
+.singleAgenTitle {
+    display: flex;
+    justify-content: space-between;
+    background: $blueHighLight;
+}
+.agendaTitle {
+    display: flex;
+    align-items: center;
+}
+.agendaTitle h3.agendaTitleText {
+    font-size: 16px;
+    font-weight: 600;
+    color: $whiteColor;
+}
+.agendaTitle span.agendaBackBtn a {
+    color: $whiteColor;
+    font-size: 23px;
+    width: 60px;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+.agendaFollow {
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.agendaFollow i {
+    color: $whiteColor;
+    font-size: 19px;
+}
+.agendaFollow span.followText {
+    font-size: 14px;
+    font-weight: 600;
+    color: $whiteColor;
+}
+.agendaCheckSec {
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.customCheckBox .checkText {
+    font-size: 16px;
+    color: $whiteColor;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 18px;
+}
+.customCheckBox span.checkSubText {
+    color: $whiteColor;
+    font-size: 14px;
+    font-style: italic;
+}
+.customCheckBox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .customCheckBox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  .customCheckBox:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  .customCheckBox input:checked ~ .checkmark {
+    background-color: $greenColor;
+  }
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .customCheckBox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  .customCheckBox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 7px;
+    height: 12px;
+    border: solid $darkBlue;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.singleAgenSec-3 {
+    display: flex;
+    justify-content: flex-end;
+}
+.singleAgenBtn a {
+    display: block;
+    background: $greenColor;
+    text-align: center;
+    padding: 9px 0;
+    color: $darkBlue;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-radius: 0px;
+}
+.singleAgenBtn {
+    width: 30%;
+}
+.singleAgenSec-4 {
+    display: flex;
+    margin-top: 40px;
+}
+.singleAgenSec-4 .singleAgenVdoChtSec {
+    width: 70%;
+    margin-right: 10px;
+}
+.singleAgenSec-4 .singleAgenChat {
+    width: 30%;
+    background: $darkBlue;
+    padding: 20px 15px 15px;
+    margin-left: 10px;
+    min-width: 30%;
+}
+.singleAgenVideo video#ban_video {
+    width: 100%;
+}
+.singleAgenVideo {
+    position: relative;
+    display: flex;
+}
+.singleAgenVideo .videoControlBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.singleAgenVideo .videoControlBtn img {
+    width: 80px;
+}
+.singleAgenDes {
+    background: $bgWhiteColor;
+    padding: 15px;
+}
+.singleAgcalTime {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #131313;
+}
+.singAgeDesText p {
+    font-size: 15px;
+    color: #131313;
+}
+.singleAgeSche span.sinAgenCal {
+    margin-right: 10px;
+}
+.singleAgeSche span {
+    color: #707070;
+    font-size: 14px;
+    font-weight: 500;
+}
+.singleAgeSche span svg {
+    font-size: 16px;
+    margin-right: 10px;
+    margin-top: -3px;
+}
+.singleAgeLike i {
+    color: $darkBlue;
+    font-size: 18px;
+}
+.singleAgenText h3 {
+    color: $whiteColor;
+    font-size: 18px;
+    margin-bottom: 0px;
+    font-weight: 500;
+}
+.singleAgenText p {
+    font-size: 14px;
+    color: $whiteColor;
+    line-height: 21px;
+}
+.singleAgenText {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #364469;
+    padding-bottom: 15px;
+}
+.singleAgeAttenChat .profileChat .profileChatImg img {
+    width: 50px;
+    height: 50px;
+}
+.singleAgeAttenChat .profileChat .profileChatText h3.attendeeName, .singleAgeAttenChat .profileChat .profileChatText p.attendeeComp {
+    color: $whiteColor;
+}
+.singleAgeAttenChat .profileChat span.ChatImg svg {
+    color: $whiteColor;
+}
+.singleAgeAttenChat .profileChat {
+    border: 0;
+}
+  /*====================== End Single Agenda ====================== */
+
+/*====================== Start Welcome profile ====================== */
+.welcomeProHead {
+    background: $darkBlue;
+    padding: 15px 0;
+    text-align: center;
+    color: $whiteColor;
+    min-height: 123px;
+    display: flex;
+    flex-direction: column;
+}
+.profileAttenDetail h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.welcomeProHead h2 {
+    color: $whiteColor;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.welcomeProForm {
+    background: $bgWhiteColor;
+    padding: 30px;
+}
+.welcomeProHead ul.welcomeTab {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+.welcomeProHead ul.welcomeTab li {
+    list-style: none;
+    position: relative;
+    margin: 0 20px;
+}
+.welcomeProHead ul.welcomeTab li a {
+    color: $whiteColor;
+    border: 1px solid;
+    width: 35px;
+    display: flex;
+    height: 35px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+.welcomeProHead .welcomeTab li.active a {
+    background: $greenColor;
+    color: $darkBlue;
+    border: 1px solid $greenColor;
+    font-weight: 600;
+}
+.welcomeProHead ul.welcomeTab li:after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: -30px;
+    height: 1px;
+    width: 20px;
+    background:$bgWhiteColor;
+}
+.welcomeProHead ul.welcomeTab li:last-child:after{
+    content: none;
+}
+.atteProfileImage {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.atteProfileImage img {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+}
+.welcomeProHead p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 0 5px;
+}
+.welcomeProInner {
+    display: flex;
+}
+.welcomeProfilePage-2 .welcomeProInner {
+    padding: 0 100px;
+}
+.welcomeProInner .welProfileLeft {
+    width: 50%;
+    padding-right: 15px;
+}
+.welcomeProInner .welProfileDetail {
+    width: 50%;
+    padding-left: 15px;
+}
+.welcomeImageSec {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.uploadProImage {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+}
+.uploadProImage span.uploadImgText svg {
+    margin-right: 10px;
+}
+.uploadProImage input#uploadImg {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    height: 40px
+}
+.uploadProImage span.uploadImgText {
+    background: $darkBlue;
+    padding: 9px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    color: $whiteColor;
+}
+.formField .form-control {
+    min-height: 45px;
+    background: #fbfbfb;
+    font-size: 14px;
+    border-radius: 7px;
+    border: 0;
+    box-shadow: 0 0px 5px 1px #e6e6e6;
+}
+.formField select.form-control, .selectDropDown select.form-control {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+.selectDropDown {
+    position: relative;
+}
+.selectDropDown:after {
+    content: "\f078";
+    position: absolute;
+    font-family: fontawesome !important;
+    right: 13px;
+    top: 13px;
+    font-size: 13px;
+    color: #919191;
+}
+.formField .form-group {
+    margin-bottom: 20px;
+}
+.formField .form-control::placeholder {
+    color: #9a9a9a;
+}
+.profileSaveButton {
+    border-top: 1px solid #e6e6e6;
+    padding-top: 50px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+.profileSaveButton .saveContNew {
+    background: $greenColor;
+    color: $darkBlue;
+    padding: 10px 30px;
+    font-weight: 600;
+    min-width: 250px;
+    border: 1px solid $greenColor;
+    border-radius: 9px;
+}
+.profileSaveButton .saveContNew:focus {
+    border: 1px solid #29f0b4;
+    box-shadow: none;
+    outline: none;
+}
+/*====================== End Welcome profile - 1 ====================== */
+/*====================== Start Welcome profile - 2 ====================== */
+.welcmQuesBlock h3.questH3 {
+    position: relative;
+    padding-left: 30px;
+    font-size: 16px;
+    padding: 5px 0 4px 0px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #131313;
+}
+.welcmQuesBlock h3.questH3 span.iIcon {
+    width: 25px;
+    height: 25px;
+    border: 1px solid;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    color: #131313;
+}
+.welcomeQuestionLeft {
+    padding-left: 40px;
+    width: 50%;
+}
+.welcomeQuestionRight {
+    width: 50%;
+    padding-left: 64px;
+}
+.welcmQuesBlock {
+    margin-bottom: 50px;
+}
+.welcomeProfilePage-2 .profileSaveButton {
+    padding-top: 0;
+}
+.welcomeProfilePage-2 .profileSaveButton .profilePages {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.welcomeProfilePage-2 .profileSaveButton .profilePages li {
+    list-style: none;
+    display: inline-block;
+    border-right: 1px solid #131313;
+    line-height: 12px;
+    padding-right: 15px;
+    margin-right: 15px;
+}
+.welcomeProfilePage-2 .profileSaveButton .profilePages li a {
+    color: $darkBlue;
+    font-size: 14px;
+    font-weight: 500;
+}
+.welcomeProfilePage-2 .profileSaveButton .profilePages li:last-child {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+/*====================== End Welcome profile - 2 ====================== */
+/*====================== Start Welcome profile - 3 ====================== */
+.welcome3Inner {
+    width: 70%;
+    margin: 0 auto;
+}
+.welcome3Text h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+    color: #131313;
+}
+.welcome3Text p {
+    font-size: 16px;
+    color: #131313;
+}
+.welcome3Text {
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+.welcome3Filed .form-group label {
+    font-size: 15px;
+    color: #131313;
+    font-weight: 600;
+}
+/*====================== End Welcome profile - 3 ====================== */
+/*====================== Start Ondemand ====================== */
+.sitePageTitle h2 span.siteSubTitle {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: none;
+}
+.demandVideo {
+    background: $bgWhiteColor;
+    padding: 20px;
+}
+.demandTitleFilter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.demandFilter .filterBtn {
+    padding: 0 7px;
+    width: 170px;
+}
+.demandFilter .filterBtn button.fiterTag:focus,.filterBtn button.removeTag:focus {
+    outline: none;
+}
+.filterBtnSearch .form-control {
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 37px;
+    background: #eeeeee;
+    border-radius: 0;
+}
+.filterBtnSearch {
+    position: relative;
+}
+.filterBtnSearch:after {
+    content: "\f002";
+    position: absolute;
+    font-family: fontAwesome;
+    right: 7px;
+    top: 8px;
+    font-size: 15px;
+    color: #9a9a9a;
+}
+.filterBtnSearch {
+    position: relative;
+}
+.demandFilter .filterBtn button.fiterTag {
+    background: $greenColor;
+    color: $darkBlue;
+    font-size: 13px;
+    min-height: 37px;
+    padding: 0 19px;
+    border: 1px solid $greenColor;
+    border-radius: 0px;
+    width: 100%;
+    font-weight: 600;
+}
+.demandFilter {
+    display: flex;
+}
+.filterBtn button.removeTag{
+    background: $darkBlue;
+    color: $whiteColor;
+    font-size: 13px;
+    min-height: 37px;
+    padding: 0 19px;
+    border: 1px solid;
+    border-radius: 0px;
+    width: 100%;
+    font-weight: 600;
+}
+.demandFilter .selectDropDown select.form-control {
+    min-height: 37px;
+    background: #eeeeee;
+    border: 1px solid #e1e1e1;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 0;
+}
+.demandFilter .selectDropDown:after {
+    top: 10px;
+    font-size: 12px;
+}
+.demandTitle h3 {
+    font-size: 18px;
+    color: $darkBlue;
+    position: relative;
+    font-weight: 600;
+}
+.demandTitle h3:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    background: $darkBlue;
+    left: 0;
+    bottom: -10px;
+}
+.demandVideoDiv {
+    position: relative;
+    display: flex;
+}
+.demandVideoDiv .videoControlBtn {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+}
+.demandVideoDiv .videoControlBtn img {
+    width: 70px;
+}
+.demandVideoText h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.demandVideoText p {
+    color: #707070;
+    font-size: 14px;
+    font-weight: 500;
+}
+.demandVideoText p svg {
+    font-size: 18px;
+    margin-right: 10px;
+    margin-top: -3px;
+}
+.filterVideoSec {
+    display: flex;
+    margin: 0 -7px;
+    flex-wrap: wrap;
+}
+.filterVideoSec .demandVideoBlock {
+    width: 33.33%;
+    padding: 0 7px;
+    margin-bottom: 20px;
+}
+.demandVideoDiv video {
+    width: 100%;
+}
+.demandVideoBlock .demandVideoText {
+    background: #f6f6f6;
+    padding: 10px;
+}
+/*====================== End Ondemand ====================== */
+/*====================== Start Brand Inner ====================== */
+.brandInnerPage {
+    background: $blueTransparent;
+}
+.brandOfficeHrsForm {
+    display: flex;
+}
+.brandOfficeHrsForm .officeHours {
+    width: 50%;
+    padding-right: 15px;
+}
+.brandOfficeHrsForm .officeForm {
+    width: 50%;
+    padding-left: 15px;
+}
+.officeHours h2 {
+    font-size: 18px;
+    color: $whiteColor;
+    margin-bottom: 20px;
+}
+.brandOfficeHrsForm {
+    margin-top: 40px;
+    padding: 0 20px 40px;
+}
+.bgOfficalHour {
+    background: $darkBlue;
+    border: 1px solid #fff;
+    padding: 17px 15px;
+    margin-bottom: 25px;
+}
+.bgOfficalHour:last-child {
+    margin-bottom: 0;
+}
+.sessionTimeHour h3 {
+    font-size: 16px;
+    color: $whiteColor;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+.sessionTimeHour p {
+    font-size: 13px;
+    color: $whiteColor;
+}
+.weekdaytimeing {
+    display: flex;
+    justify-content: space-between;
+}
+.sessionTimeFollow i {
+    color: $whiteColor;
+    font-size: 14px;
+}
+.chatDayHours {
+    border: 1px solid #fff;
+    background: $darkBlue;
+    padding: 15px;
+    display: flex;
+}
+.chatDayHourInner h3 {
+    color: $whiteColor;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 13px;
+}
+.chatDayHours .chatDayHourInner {
+    width: 50%;
+}
+.chatDayHourInner li {
+    color: $whiteColor;
+    font-size: 13px;
+    margin-bottom: 10px;
+    list-style: none;
+}
+.chatDayHourInner li:last-child {
+    margin-bottom: 0;
+}
+.officeChatSec {
+    margin-top: 30px;
+}
+.presentationBtnSec button.presentationBtn {
+    width: 100%;
+    background: $greenColor;
+    padding: 18px 0;
+    border: 1px solid $greenColor;
+    border-radius: 0px;
+    font-size: 18px;
+    font-weight: 600;
+    color: $darkBlue;
+}
+.presentationBtnSec {
+    padding: 45px 0 0;
+}
+.presentationBtnSec button.presentationBtn:focus {
+    outline: none;
+}
+.brandAppointment {
+    margin-top: 40px;
+    background: #f5f5f5;
+    padding: 20px 20px 25px;
+}
+.brandAppointment h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.brandAppointment .formField .form-control {
+    box-shadow: 0 0px 5px 1px #d4d4d4;
+}
+.getTouchSec button.getTouchBtn {
+    background: $greenColor;
+    border: 1px solid $greenColor;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 9px 30px;
+    color: $darkBlue;
+    border-radius: 0px;
+}
+.brandVideoGameSec {
+    padding: 0 20px 40px;
+}
+.brandVideoGameSec h3 {
+    color: $whiteColor;
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 26px;
+    font-weight: 600;
+}
+.videoGameBtnBlock {
+    text-align: center;
+    margin-top: 30px;
+}
+.videoGameBtnBlock button.videoGameBtnBtn {
+    background: $greenColor;
+    padding: 15px 30px;
+    font-weight: 600;
+    color: $darkBlue;
+    border: 1px solid $greenColor;
+    border-radius: 0px;
+}
+.videoGameBtnBlock button.videoGameBtnBtn:focus {
+    outline: none;
+}
+.getTouchSec {
+    text-align: right;
+}
+.brand360Video img {
+    width: 85%;
+}
+/*====================== End Brand Inner ====================== */
+
+/*====================== Start Expo ====================== */
+.devExpoPage {
+    background: $blueTransparent;
+    padding: 20px;
+}
+.expoFeatureNetwork {
+    display: flex;
+}
+h3.expoSecTtile {
+    color: $whiteColor;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.expoSessionBlock {
+    border: 1px solid #fff;
+    background: $darkBlue;
+    position: relative;
+    padding: 0px 0px 0px 60px;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    margin-bottom: 40px;
+}
+.expoSrNo {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: $greenColor;
+    top: 50%;
+    left: 0px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: $darkBlue;
+}
+.expoSecName h2 {
+    font-size: 14px;
+    color: $whiteColor;
+}
+.expoFeature {
+    width: 65%;
+    padding-right: 10px;
+}
+.expoNetwork {
+    width: 35%;
+    padding-left: 10px;
+}
+.expoSecImage {
+    width: 30%;
+}
+.expoSecName {
+    width: 70%;
+    padding: 8px 15px 8px 0;
+    position: relative;
+}
+.expoSecImage img {
+    object-fit: cover;
+    width: 100%;
+    height: 135px;
+}
+.expoSecName .sessionTime span.timeText {
+    font-size: 12px;
+    color: $whiteColor;
+}
+.expoSecName .sessionTime span.timeIcon svg {
+    font-size: 18px;
+}
+.expoSecName .agendaTag li.followAgenda span.agendaLike i {
+    color: $whiteColor;
+}
+.expoSecName {
+    width: 70%;
+    padding: 8px 15px 8px 0;
+}
+.expoSecName .sessionTime {
+    margin-top: 5px;
+}
+.expoSessionBlock ul.agendaTagUl li a {
+    font-size: 12px;
+}
+.networkBtn li {
+    margin-bottom: 15px;
+}
+.networkBtn li a {
+    display: block;
+    background: $greenColor;
+    color: $darkBlue;
+    padding: 10px 10px;
+    font-weight: 500;
+    font-size: 16px;
+}
+.networkBtn li:last-child {
+    margin-bottom: 0;
+}
+.expoSessionBlock:last-child {
+    margin-bottom: 0;
+}
+.expoExhibitors {
+    margin-top: 60px;
+}
+.exhibitorsTilteDrop {
+    display: flex;
+    justify-content: space-between;
+}
+.exhibitorsDropBox ul {
+    display: flex;
+}
+.exhibitorsDropBox ul li {
+    list-style: none;
+    margin-left: 20px;
+    width: 250px;
+}
+.dropSelectBox select.custom-select, .searchExhibitors input.form-control {
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 40px;
+}
+.searchExhibitors {
+    position: relative;
+}
+.searchExhibitors:after {
+    content: "\f002";
+    position: absolute;
+    font-family: fontAwesome;
+    right: 7px;
+    top: 8px;
+    font-size: 15px;
+    color: #9a9a9a;
+}
+.searchExhibitors input.form-control::placeholder {
+    color: #d0d0d0;
+    font-weight: 400;
+}
+.exhibitorsTilteDrop h3 {
+    color: $whiteColor;
+    font-size: 18px;
+    font-weight: 500;
+}
+.exhibitorsTilteDrop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+.exhibitorsListBlock h3 {
+    font-size: 14px;
+    color: $whiteColor;
+    margin-bottom: 15px;
+}
+ul.brandLogoSec {
+    display: flex;
+    margin: 0 -10px;
+    flex-wrap: wrap;
+}
+.brandLogoSec li {
+    width: 16.66%;
+    list-style: none;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+.brandLogoSec li img {
+    width: 100%;
+    border-radius: 7px;
+}
+.exhibitorsListBlock {
+    margin-top: 10px;
+}
+.sponsorSec h4 {
+    font-size: 11px;
+    color: $whiteColor;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.sponsorSec span.sponsorName {
+    color: $whiteColor;
+    font-size: 12px;
+    font-weight: 600;
+}
+.sponsorSec {
+    position: absolute;
+    text-align: center;
+    background: $blueHighLight;
+    padding: 5px 6px;
+    line-height: 15px;
+    right: 0;
+    bottom: -20px;
+}
+.dropSelectBox select.custom-select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: $bgWhiteColor;
+}
+.dropSelectBox {
+    position: relative;
+}
+.dropSelectBox:after {
+    content: "\f078";
+    position: absolute;
+    font-family: fontawesome !important;
+    right: 10px;
+    top: 10px;
+    font-size: 13px;
+    color: #919191;
+}
+/*====================== End Expo ====================== */
+/*====================== Start Quest ====================== */
+ul.questPointUl {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+ul.questPointUl li {
+    list-style: none;
+}
+ul.questPointUl li .questPointBlock {
+    border: 1px solid #fff;
+    width: 190px;
+    margin: 0 10px;
+    border-radius: 9px;
+    padding: 15px 0;
+}
+ul.questPointUl li .questPointBlock p {
+    color: $whiteColor;
+    font-size: 16px;
+    font-weight: 600;
+}
+ul.questPointUl li .questPointBlock h3 {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+}
+.questPointPos {
+    margin-top: 40px;
+}
+.pointBlockBlock {
+    margin-top: 40px;
+    background-color: $blueTransparent;
+    padding: 20px 20px;
+}
+.earnPointSec h3, .canWinSec h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.earnPointSec p, .canWinSec p {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    width: 46%;
+    margin: 10px auto;
+}
+.earnPointList {
+    margin-top: 20px;
+    text-align: center;
+}
+.earnPointList ul {
+    display: inline-block;
+    text-align: left;
+    width: 55%;
+}
+.earnPointList ul .pointSecBlcok {
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+.pointSecBlcok h4 {
+    color: $whiteColor;
+    font-size: 14px;
+}
+.earnPointList li {
+    list-style: none;
+    margin-bottom: 15px;
+}
+.pointSecBlcok span.earcnedPoints {
+    background: $greenColor;
+    color: $darkBlue;
+    padding: 2px 20px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+.earnPointList li:last-child {
+    margin-bottom: 0;
+}
+.canWinSec {
+    margin-top: 40px;
+}
+.myPointsSec {
+    text-align: left;
+    margin-top: 40px;
+}
+.myPointsSec h3 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+.myPointsBlock {
+    display: flex;
+    margin: 0 -15px;
+}
+.myPointsBlock .myPointsList {
+    border: 1px solid #fff;
+    margin: 0 15px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 12px;
+}
+.myPointsBlock .myPointsList h4 {
+    color: $whiteColor;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.myPointsBlock .myPointsList p {
+    width: 100%;
+    margin: 0 0;
+    font-weight: 500;
+}
+.leaderboardSec {
+    margin-top: 40px;
+}
+.leaderboardSec h3 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+.leaderboardSec h3 span {
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+}
+.leaderboardBlock ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.leaderboardBlock ul li {
+    width: 50%;
+    list-style: none;
+    padding: 0px 10px;
+    margin-bottom: 20px;
+}
+.leaderboardList {
+    background: $greenColor;
+    padding: 7px 10px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.leaderboardList .leadboardPoints {
+    background: $darkBlue;
+    color: $whiteColor;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    width: 110px;
+    justify-content: center;
+}
+.leadboardPoints svg {
+    font-size: 15px;
+}
+.leaderboardList h4 {
+    font-size: 16px;
+    color: $darkBlue;
+    font-weight: 600;
+}
+.leaderboardList .leadboardPoints span.boardPoints {
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 14px;
+} 
+/*====================== End Quest ====================== */
+/*====================== Start Download Notes ====================== */
+.notesDownloadPage {
+    background: $blueTransparent;
+    padding: 25px 20px 20px;
+}
+.notesHead {
+    background: #efefef;
+    padding: 15px;
+}
+.notesHead h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+.notesHead .sessionTime span.timeIcon svg {
+    color: inherit;
+}
+.notesBlock {
+    background: $bgWhiteColor;
+    margin-bottom: 20px;
+}
+.notesContent {
+    padding: 20px;
+}
+.notesContent h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.notesContent p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.notesContent p:last-child {
+    margin-bottom: 0;
+}
+.notesDownSec {
+    border-top: 1px solid #ccc;
+    padding: 30px 20px 10px;
+    text-align: right;
+    margin-top: 20px;
+}
+.notesDownSec button.downloadNotsBtn {
+    background: $greenColor;
+    border: 0;
+    padding: 10px 30px;
+    color: $darkBlue;
+    font-weight: 500;
+    font-size: 16px;
+}
+.notesDownSec button.downloadNotsBtn i {
+    margin-right: 8px;
+}
+.notesContent li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px;
+    list-style: none;
+    line-height: 26px;
+}
+.notesContent li:after {
+    content: "\f14a";
+    position: absolute;
+    font-family: fontAwesome;
+    left: 0;
+    top: 0;
+    font-size: 15px;
+    color: #020d2c;
+}
+.notesContent li:last-child {
+    margin-bottom: 0;
+}
+/*====================== End Download Notes ====================== */
+/*====================== Start Social Chat ====================== */
+.helpChatSec {
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.helpChatSec .helpChatLeft {
+    width: 100%;
+    padding-right: 20px;
+    min-height: calc(100vh - 173px);
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.helpChatSec .helpChatRight {
+    min-width: 320px;
+    background: $darkBlue;
+}
+.chatPersonHead {
+    background: $blueColor;
+    display: flex;
+    justify-content: space-between;
+}
+.chatPerLeft {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+}
+.chatPerLeft .chatPImage img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #c2d8ee;
+}
+.chatCrossRight a {
+    display: flex;
+    background: $darkBlue;
+    height: 100%;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    color: $whiteColor;
+    font-size: 36px;
+}
+.chatCrossRight a svg {
+    transform: rotate(45deg);
+}
+.chatPStatus span.onOffStatus {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #29f0b4;
+    border-radius: 50%;
+}
+.chatPName h4 {
+    font-size: 16px;
+    color: $whiteColor;
+}
+.chatPName p {
+    color: $whiteColor;
+    font-size: 14px;
+}
+.chatPStatus {
+    padding: 0 10px;
+}
+.chatingArea {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    background: $blueTransparent;
+    height: calc(100vh - 300px);
+}
+.activeChattingSec {
+    position: relative;
+    padding: 20px;
+}
+.activeChattingSec .senderMessage {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 5px;
+}
+.activeChattingSec .messageDate {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 30px;
+    padding: 0 0px;
+}
+.receiverMassage span.MsgTime {
+    display: block;
+    text-align: right;
+    margin-top: 4px;
+}
+.messageDate hr {
+    margin: 0;
+    height: 0px;
+    width: 100%;
+    border-top: 1px solid #94949c;
+}
+.activeChattingSec .receiverMassage {
+    justify-content: flex-end;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 5px;
+}
+.activeChattingSec .messangerImg {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.messangerImg img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 3px 1px #1b4ece;
+}
+.activeChattingSec .messangerText {
+    width: 70%;
+    max-width: max-content;
+}
+.receiverMassage .messangerText {
+    padding-right: 10px;
+}
+.senderMessage .messangerText {
+    padding-left: 10px;
+}
+.senderMessage .messangerText p {
+    padding: 15px 15px;
+    background-image: linear-gradient(to right, #e4ecf4 , #f3f7fc);
+    border: 1px solid #cbd6e2;
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    font-size: 13px;
+}
+.senderMessage .messangerText span.MsgTime {
+    display: block;
+    text-align: left;
+    padding-top: 5px;
+}
+.messangerText span.MsgTime {
+    color: #878787;
+    font-size: 11px;
+}
+.writeMessageBox {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    align-items: center;
+    margin-top: 20px;
+}
+.writeMessageBox .addFileMsg {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 45px;
+    margin-right: 20px;
+}
+.writeMessageBox .addFileMsg input#contentMsgUplaod {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+}
+.writeMessageBox .messageTypeing {
+    width: 100%;
+}
+.messageTypeing .form-group {
+    margin: 0;
+    display: flex;
+    height: 100%;
+}
+.messageTypeing .form-group textarea {
+    border: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    line-height: 22px;
+    min-height: 46px;
+    max-height: 46px;
+}
+.messageTypeing .form-group textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+.writeMessageBox .sendBtnEmoji {
+    display: flex;
+    align-items: center;
+}
+.sendBtnEmoji .sendEmoji {
+    padding: 0 20px;
+}
+.sendEmoji i {
+    font-size: 23px;
+    color: $darkBlue;
+}
+.msgSendBtn .chatSendBtn {
+    width: 55px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 0;
+    border-radius: 10px;
+    background: $darkBlue;
+    border: 1px solid $darkBlue;
+}
+.adminChatingOnline {
+    height: calc(100vh - 240px);
+}
+.helpChatRightInner {
+    height: calc(100% - 107px);
+    overflow: hidden;
+}
+.onlineChatSearch {
+    position: relative;
+}
+.onlineChatSearch .form-control {
+    height: 45px;
+    font-size: 15px;
+    padding: 0 50px 0 15px;
+    border: 0;
+    background: #364469;
+    border-radius: 0;
+    color: $whiteColor;
+}
+.onlinePersonChat .chatPerson.active {
+    background: #2b2497;
+}
+.onlineChatSearch:after {
+    content: "\f002";
+    position: absolute;
+    font-family: fontAwesome;
+    right: 10px;
+    top: 10px;
+    font-size: 15px;
+    color: #9a9a9a;
+}
+.onlineChatSearch span.perSearch {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chatPerson {
+    display: flex;
+    border-bottom: 1px solid #1e3265;
+    padding: 15px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.chatPerson .chatImgName {
+    display: flex;
+    align-items: center;
+}
+.chatPersonImg img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #c2d8ee;
+}
+.chatPerson .chatPersonName {
+    padding-left: 10px;
+}
+.chatPersonName h4 {
+    font-size: 14px;
+    color: $whiteColor;
+    margin-bottom: 3px;
+    font-weight: 400;
+}
+.chatPersonName p {
+    margin-bottom: 0;
+    font-size: 12px;
+    color: $whiteColor;
+}
+.attendeeStatus span.onlineStatus {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #29f0b4;
+    border-radius: 50%;
+}
+.messageDate h5 {
+    font-size: 13px;
+    color: #cbc9c9;
+    font-weight: 400;
+    padding: 0 30px;
+}
+.receiverMassage .messangerText p {
+    padding: 12px 15px;
+    background-image: linear-gradient(to right, #041544, #041850);
+    border: 1px solid #cbd6e2;
+    border-radius: 15px;
+    border-bottom-right-radius: 0;
+    font-size: 13px;
+    color: $whiteColor;
+}
+.newGroupSec {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.newGroupSec .dropdown-toggle {
+    background: $blueHighLight;
+    color: $whiteColor;
+    font-weight: 500;
+    font-size: 15px;
+    border: 1px solid $blueHighLight;
+    border-radius: 0;
+    min-height: 45px;
+    padding: 0 22px;
+}
+.newGroupSec .show>.dropdown-toggle, .newGroupSec .dropdown-toggle:not(:disabled):not(.disabled):active {
+    background: $blueHighLight;
+    border: 1px solid;
+}
+.newGroupSec .dropdown-toggle:focus, .newGroupSec .show>.dropdown-toggle:focus, .newGroupSec .dropdown-toggle:not(:disabled):not(.disabled):active {
+    outline: none;
+    box-shadow: none;
+}
+.newGroupSec .dropdown-toggle svg {
+    margin-right: 8px;
+}
+.notificationBlk a {
+    background: $greenColor;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    font-size: 21px;
+    color: $darkBlue;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.notificationBlk a span.notifyStatus {
+    position: absolute;
+    font-size: 10px;
+    top: -5px;
+    right: -5px;
+    background: #f92f2f;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.newGroupSec .dropdown-menu.show {
+    border-radius: 0;
+    margin: 0;
+}
+.newGroupSec .dropdown-menu.show a.dropdown-item {
+    font-size: 14px;
+    padding: 6px 10px;
+}
+.newGroupSec .dropdown-menu.show a.dropdown-item:hover {
+    background: #dedede;
+}
+.socialPage .innerContentBlock {
+    padding-right: 0;
+}
+/*====================== End Social Chat ====================== */
+/*====================== Start Social Feeds ====================== */
+.socialFeedLeft .sitePageTitle h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.socialFeedLeft .sitePageTitle {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.socialFeedLeft .sitePageTitle li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+.socialFeedLeft .sitePageTitle a {
+    color: $whiteColor;
+    font-size: 28px;
+}
+.socialFeedsSec {
+    display: flex;
+    width: 100%;
+    flex-flow: column wrap;
+    max-height: 890px;
+    counter-reset: brick;
+    flex-wrap: wrap;
+    columns: 3;
+    overflow: hidden;
+}
+.socialFeedsSec .getFeedsBlock {
+    width: 33.33%;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+.getFeedsBlockInner {
+    background: $bgWhiteColor;
+    padding: 10px;
+}
+.feedsText {
+    padding: 40px 0;
+    position: relative;
+    text-align: center;
+}
+.feedsText:after {
+    content: "\f10e";
+    position: absolute;
+    font-family: fontAwesome;
+    font-size: 20px;
+    color: $darkBlue;
+    top: 5px;
+    transform: translate(-50%, 0px);
+}
+.feedsText::before {
+    content: "\f10d";
+    position: absolute;
+    font-family: fontAwesome;
+    font-size: 20px;
+    color: $darkBlue;
+    bottom: 0px;
+    transform: translate(-50%, 0px);
+}
+.getSocialFeeds {
+    margin: 0 -10px;
+}
+.feedsUserImgText img {
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+    object-fit: cover;
+}
+.feedsUserText h4 {
+    font-size: 11px;
+}
+.feedsUserImgText {
+    display: flex;
+    align-items: center;
+}
+.feedsUserDetail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+.feedsImg {
+    margin-bottom: 15px;
+}
+.feedsUserText p.mintsAgo {
+    font-size: 13px;
+    font-weight: 500;
+}
+.feedsLogo i {
+    font-size: 20px;
+    color: $darkBlue;
+}
+.feedsUserImgText .feedsUserText {
+    padding-left: 6px;
+}
+.feedsText p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #131313;
+}
+/*====================== End Social Feeds ====================== */
+/*====================== Start Forgot ====================== */
+.forgotPassPage .loginInner {
+    height: calc(100vh - 200px);
+    padding: 50px 60px 50px;
+    position: relative;
+}
+.forgotPassPage .loginInner label {
+    display: block;
+    text-align: left;
+    color: #fff;
+    font-weight: 500;
+}
+.forgotPassPage .forgotInner {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+}
+/*====================== End Forgot ====================== */
+/*====================== Start Polls Listing ====================== */
+.pollsQuestionPage .pollsQBlock .agendaTimeImage .agendaTimeTag {
+    width: 100%;
+}
+.writeReview {
+    text-align: right;
+    margin-top: 20px;
+}
+.writeReview button.writeReviewBtn svg {
+    font-size: 16px;
+    margin-right: 6px;
+}
+.writeReview button.writeReviewBtn {
+    background: $greenColor;
+    border: 1px solid $greenColor;
+    color: $darkBlue;
+    padding: 7px 20px;
+    font-weight: 600;
+    font-size: 15px;
+}
+.pollsQuestionPage .pollsQBlock .agendaTimeImage .agendaTimeTag {
+    width: 100%;
+    padding: 20px 20px 20px 0;
+}
+.pollsQuestionPage .pollsQBlock {
+    width: 100%;
+}
+/*====================== End Polls Listing ====================== */
+/*====================== Start Polls Question ====================== */
+.pollsQuestionPage {
+    background: $blueTransparent;
+    padding: 40px 35px;
+}
+.pollsQuestionBlock {
+    margin-bottom: 40px;
+}
+.answerSlider {
+    background: #eaeaea;
+    width: 92%;
+    margin: 0 auto;
+    padding: 15px 25px 30px;
+}
+.pollsQuest h2 {
+    color: #fff;
+    font-size: 18px;
+    padding-left: 20px;
+}
+.pollsQuest {
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.pollsQuest span.qTag {
+    color: $whiteColor;
+    font-weight: 600;
+    font-size: 20px;
+}
+.answerREsponse h3 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.answerREsponse h3 span.ansEmoji {
+    font-size: 40px;
+    margin-left: 15px;
+    color: $darkBlue;
+}
+.answerREsponse {
+    margin-bottom: 20px;
+}
+.ansEmoji svg {
+    background: $greenColor;
+    border-radius: 50%;
+}
+.answerSliderResponse {
+    position: relative;
+}
+.answerSliderResponse .responseStrip {
+    height: 10px;
+    background: $blueColor;
+}
+.answerSliderResponse span.activeAcnwer {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background: $greenColor;
+    top: -8px;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 2px #c1c1c1;
+    z-index: 1;
+    cursor: pointer;
+}
+.answerStepUl li span.answerStep {
+    display: inline-block;
+    width: 4px;
+    height: 25px;
+    background: $blueColor;
+    border-radius: 5px;
+}
+.answerStepUl li {
+    list-style: none;
+    position: absolute;
+    top: -8px;
+}
+ul.answerStepUl {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 10px;
+}
+ul.answerStepUl li.answeSpep-1 {
+    left: 0%;
+}
+.answerStepUl li.answeSpep-2 {
+    left: 25%;
+}
+.answerStepUl li.answeSpep-3 {
+    left: 50%;
+}
+.answerStepUl li.answeSpep-4 {
+    left: 75%;
+}
+ul.answerStepUl li.answeSpep-5 {
+    left: 100%;
+}
+.badEmoji span.activeAcnwer {
+    left: -7px;
+}
+.notBadEmoji span.activeAcnwer {
+    left: 24%;
+}
+.goodEmoji span.activeAcnwer {
+    left: 49%;
+}
+.awesomeEmoji span.activeAcnwer {
+    left: 74%;
+}
+.ExcellentEmoji span.activeAcnwer {
+    left: 99%;
+}
+.pollsSubmit {
+    text-align: right;
+    width: 92%;
+    margin: 0 auto 20px;
+}
+.pollsSubmit button.pollsSubmitBtn {
+    background: $greenColor;
+    border: 1px solid $greenColor;
+    color: $darkBlue;
+    padding: 7px 30px;
+    font-weight: 600;
+    font-size: 15px;
+}
+/*====================== Start Polls Question ====================== */
+/*====================== Start order Complete ====================== */
+.orderCompleteHead {
+    display: flex;
+    background: $blueColor;
+    align-items: center;
+}
+.orderCompLogo img {
+    width: 290px;
+}
+.orderCompLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $greenColor;
+    width: 30%;
+    padding: 60px 0;
+}
+.orderCompEvent {
+    padding-left: 30px;
+}
+.orderCompEvent h3 {
+    color: $whiteColor;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+.orderCompEvent p {
+    color: $whiteColor;
+    margin-top: 10px;
+    font-weight: 500;
+}
+.orderCompInner {
+    width: 50%;
+    margin: 0px auto;
+    background: #fff;
+    padding: 40px;
+    max-width: 750px;
+    border-radius: 12px;
+}
+.orderCompSign svg {
+    font-size: 65px;
+    color: $darkBlue;
+}
+.orderCompContent h3 {
+    font-size: 23px;
+    text-align: center;
+    font-weight: 600;
+    color: $darkBlue;
+    margin-bottom: 20px;
+}
+.orderCompSign {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.orderCompSummit {
+    display: flex;
+    align-items: center;
+}
+.orderCompButton button.orderSummitBtn {
+    background: $greenColor;
+    color: $darkBlue;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid $greenColor;
+    padding: 9px 0px;
+    width: 210px;
+}
+.orderCompUsrPass {
+    padding-left: 15px;
+}
+.orderCompUsrPass p {
+    font-size: 15px;
+    font-weight: 500;
+}
+.orderCompUsrPass p span.orderUsrPass {
+    font-weight: 600;
+    display: inline-block;
+    width: 100px;
+}
+.orderCompSummit {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.orderCompButton button.orderSummitBtn.printConfirm {
+    background: $darkBlue;
+    color: $whiteColor;
+    border: 1px solid $darkBlue;
+}
+.orderCompleteSec {
+    height: calc(100vh - 150px);
+    padding: 100px 0;
+}
+.orderCompSummit:last-child {
+    margin-bottom: 0;
+}
+/*====================== End order Complete ====================== */
+/*====================== Start FAQ Page ====================== */
+.faqPage {
+    background: $blueTransparent;
+    padding: 40px 35px;
+}
+.contactAdmin .contactAdminBtn {
+    background: $greenColor;
+    color: $darkBlue;
+    border: 1px solid $greenColor;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.faqSectionBlock .accordion {
+    background: #ececec;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 22px 17px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    color: $darkBlue;
+    width: 100%;
+    border: 0;
+    align-items: center;
+  }  
+.faqSectionBlock .active, .faqSectionBlock .accordion:hover {
+    background-color: #ccc; 
+  }
+.faqSectionBlock .panel {
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 20px;
+  }
+.faqSectionBlock {
+    margin-bottom: 20px;
+}
+.faqSectionBlock .accordion svg {
+    font-size: 22px;
+    transform: rotate(180deg);
+}
+.faqSectionBlock .accordion.active svg {
+    transform: rotate(0deg);
+}
+/*====================== End FAQ Page ====================== */
+/*====================== Start Help Desk ====================== */
+.helpDeskPage .innerContentBlock {
+    padding-right: 0;
+}
+.chatWithAdminPage .chatWithAdmin {
+    padding-right: 20px;
+}
+.chatWithAdminPage {
+    display: flex;
+}
+.helpUserRight {
+    min-width: 320px;
+    background: $darkBlue;
+}
+.adminNameBlock {
+    background: $blueTransparent;
+    text-align: center;
+    padding: 100px 0;
+    border: 1px solid #55565f;
+}
+.adminNameSec h3 {
+    font-size: 24px;
+    color: $whiteColor;
+    font-weight: 600;
+}
+.adminNameSec p {
+    color: $whiteColor;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    margin: 15px 0 30px;
+}
+.adminNameSec button.adminChatBtn {
+    background: $greenColor;
+    padding: 10px 40px;
+    border: 0;
+    color: $darkBlue;
+    font-weight: 600;
+}
+.adminNameSec {
+    margin-bottom: 20px;
+}
+.signedWith h3 {
+    color: $whiteColor;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.signedWith p {
+    color: $whiteColor;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 1px solid;
+    display: inline-block;
+}
+.adminChatDec {
+    margin-top: 50px;
+}
+.adminChatDec p {
+    color: $whiteColor;
+    font-size: 14px;
+    padding: 0 60px;
+}
+.helpUserProfile .helpusrImg img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+.helpusrInfo {
+    color: $whiteColor;
+    padding-left: 15px;
+}
+.helpUserProfile {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+.helpusrInfo h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.helpusrInfo .helpusrEdit a {
+    color: $whiteColor;
+    font-size: 13px;
+}
+.helpusrInfo .helpusrEdit a svg {
+    margin-right: 5px;
+    font-size: 16px;
+}
+/*====================== End Help Desk ====================== */
+/*====================== Start Chat Help ====================== */
+.helpDeskChat .helpChatLeft {
+    padding-right: 20px;
+}
+.supportInfo {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+.chatBack a {
+    height: 100%;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $whiteColor;
+    font-size: 22px;
+    background: $darkBlue;
+}
+.supportImg img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.supportstatus span.statusOn {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #29f0b4;
+    border-radius: 50%;
+}
+.supportstatus {
+    padding: 0 10px;
+}
+.supportName h3 {
+    color: $whiteColor;
+    font-size: 16px;
+    font-weight: 600;
+}
+.supportName span.sportTxt {
+    color: $whiteColor;
+    font-size: 13px;
+}
+.helpDeskChat .chatPersonHead {
+    margin-bottom: 20px;
+}
+.helpDeskChat .chatingArea {
+    height: calc(100vh - 318px);
+}
+/*====================== End Chat Help ====================== */
+/*====================== Start suggested for me ====================== */
+.suggested4MePage {
+    background: $blueTransparent;
+    padding: 30px 35px;
+}
+.suggChatAtten .suggestAttendeeRight, .interestHangSec .suggHangSec {
+    min-width: 270px;
+}
+.suggChatAtten {
+    display: flex;
+}
+.suggChatAtten .suggestChatLeft {
+    padding-right: 30px;
+} 
+.suggestChatLeft .chatingArea {
+    padding: 15px 0px;
+    border: 1px solid #8e8e8e;
+    background: transparent;
+    height: 450px;
+}
+.suggChatAttenSec h3, .suggInterestSec h3, .suggHangSec h3 {
+    font-size: 18px;
+    color: $whiteColor;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.suggestAttendeeRight .onlinePersonChat .chatPerson {
+    border-bottom: 0;
+    padding: 10px 10px;
+}
+.suggestAttendeeRight .adminChatingOnline {
+    height: calc(100vh - 188px);
+}
+.suggestAttendeeRight .helpChatRightInner {
+    height: calc(100% - 0px);
+}
+.suggestChatLeft .writeMessageBox {
+    padding: 15px 15px;
+}
+.interestHangSec {
+    display: flex;
+    margin-top: 50px;
+}
+.suggInterestSec {
+    padding-right: 30px;
+}
+.suggInterestSess h2 {
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.suggInterestSess .sessionTime span.timeText {
+    font-size: 12px;
+    font-weight: 500;
+}
+.suggInterestSess .LiveSrNo {
+    width: 60px;
+    height: 60px;
+    font-size: 31px;
+}
+.suggInterestSec .liveNowSecInner {
+    padding-left: 45px;
+}
+.suggInterestSess .agendaTag ul.agendaTagUl li a {
+    font-size: 11px;
+    padding: 5px 10px;
+}
+.suggInterestSess .agendaTag .liveConfrence a {
+    font-size: 11px;
+    padding: 6px 12px 6px 20px;
+}
+.suggInterestSess .agendaTag .liveConfrence a span.playIcon {
+    height: 35px;
+    width: 35px;
+}
+.suggHangSec ul.suggHandUl li a {
+    display: flex;
+    justify-content: space-between;
+    background: $greenColor;
+    color: $darkBlue;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+.suggInterestSess .agendaImage img {
+    height: 150px;
+}
+.suggHandUl li {
+    list-style: none;
+    margin-bottom: 15px;
+}
+.suggestAttendeeRight span.ChatImg svg {
+    font-size: 12px;
+    color: #fff;
+}
+/*====================== End suggested for me ====================== */
+
+/*====================== Start Responsive ====================== */
+@media(max-width:1200px){
+.latestNewsText {
+    padding: 10px;
+}
+.forgotPassPage .loginSubmitBtn a.forgetPass {
+    order: 2;
+}
+.forgotPassPage .loginSubmitBtn {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.forgotPassPage .loginSubmitBtn button.submitBtn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.enkLogo img {
+    width: 300px;
+}
+.loginLeftText p {
+    font-size: 26px;
+}
+.loginLeftText h3 {
+    font-size: 22px;
+}
+.loginInner {
+    padding: 80px 40px 50px;
+    width: 60%;
+}
+}
+@media(max-width:1199px){
+.agendaTimeImage {
+    flex-direction: column;
+}
+.agendaTimeTag {
+    width: 100%;
+}
+.agendaImage {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.liveNowSecInner .liveNowBlock {
+    width: 100%;
+}
+.agendaImage img {
+    width: 350px;
+    height: 230px;
+}
+.dashboardSecInner {
+    flex-wrap: wrap;
+}
+.sec-3Block {
+    width: 50%;
+    padding: 0 10px;
+}
+.sec-3Block.dashboardArticle {
+    width: 100%;
+    margin-bottom: 20px;
+}
+}
+@media(max-width:1070px){
+.agendaHighLightInner {
+    flex-wrap: wrap;
+}
+.agendaHighLightInner .sec-4Block {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.agendaHighLightInner .sec-4Block .videoControlBtn img, .dashboardVideo .videoControlBtn img {
+    width: 140px;
+}
+.agendaHighLightInner .sec-4Block:last-child {
+    margin-bottom: 10px;
+}
+.dashboardSec-3 {
+    margin-top: 20px;
+}
+}
+@media(max-width:991px){
+.agendaImage {
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+.agendaTimeTag {
+    padding: 0px 0px 0px 0;
+}
+.liveNowSecInner {
+    padding: 20px;
+    margin-left: 0px;
+    margin-bottom: 30px;
+}
+.agendaImage {
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+.liveNowBlock .LiveSrNo {
+    top: 0;
+    left: 50%;
+    display: none;
+}
+.headerLogo img {
+    width: 220px;
+}
+.headerRightContant span.virExp {
+    font-size: 20px;
+    margin-right: 30px;
+}
+.headerLogo {
+    margin-left: 30px;
+}
+.worldCountriesBlock .countryBlock {
+    width: 50%;
+}
+.worldCountriesBlock {
+    flex-wrap: wrap;
+}
+.forgotPassPage {
+    min-height: calc(100vh - 230px);
+    justify-content: center;
+}
+.forgotPassPage .forgotInner {
+    position: static;
+    transform: none;
+    width: 100%;
+}
+.forgotPassPage .loginInner {
+    height: auto;
+}
+.signupRightBox .loginInner {
+    width: 90%;
+    padding: 30px 40px 30px;
+}
+.enkLogo {
+    display: none;
+}
+.loginMidSec .loginLeftText {
+    position: static;
+    transform: none;
+    top: unset;
+    left: unset;
+    text-align: center;
+}
+.loginMidSec .loginRightBox {
+    text-align: center;
+    margin-top: 20px;
+}
+.loginInner {
+    width: 80%;
+}
+.loginMidSec {
+    flex-direction: column;
+}
+.loginHeader {
+    border-bottom: 1px solid #fff;
+}
+.loginHeader {
+    justify-content: space-between;
+}
+.arrowLogo {
+    margin-right: 0px;
+    padding-left: 20px;
+}
+}
+@media(max-width:900px){
+.sec-3Block {
+    width: 100%;
+}
+.dashboardAttendies .attendiesBlock .userAttendy img {
+    width: 100px;
+    margin: 0 auto;
+}
+.sec-3Block {
+    margin-bottom: 20px;
+}
+.sec-3Block.dashboardSec-3Video {
+    margin-bottom: 0;
+}
+}
+@media(max-width:767px){
+.dashboardAgendaSec {
+    background: transparent;
+    padding: 0px;
+}
+.headerRightContant span.virExp {
+    display: none;
+}
+.worldCountriesSec {
+    margin-top: 20px;
+}
+.latestNewsVideo .videoControlBtn img, .agendaHighLightInner .sec-4Block .videoControlBtn img {
+    width: 140px;
+}
+.siteLeftBarInner .sideBarNav {
+    height: calc(100% - 15px);
+}
+.sec-3Block.dashboardSec-3Video .latestNewsVideo {
+    order: 2;
+}
+.sec-3Block.dashboardSec-3Video .latestNewsText {
+    order: 3;
+    margin-bottom: 0;
+}
+.sec-3Block.dashboardSec-3Video .latestNewsDropdown {
+    order: 1;
+    margin-bottom: 10px;
+}
+.sec-3Block.dashboardSec-3Video {
+    display: flex;
+    flex-direction: column;
+}
+div#sidebar-wrapper {
+    min-width: 240px;
+}
+.innerContentBlock {
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.dashboardVideo:after {
+    right: 0px;
+    bottom: 0px;
+    border-bottom: 0px;
+    border-right: 0px;
+} 
+.setICon i {
+    font-size: 34px;
+}
+.dashboardVideoSec {
+    padding-right: 0px;
+}
+.siteInnerHeader button#menu-toggle {
+    font-size: 0;
+    width: 40px;
+    border: 0;
+    background: $greenColor;
+    height: 3px;
+    position: relative;
+    display: block;
+    padding: 0;
+}
+.siteInnerHeader button#menu-toggle:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 40px;
+    background: $greenColor;
+    top: -10px;
+    left: 0px;
+}
+.siteInnerHeader button#menu-toggle:before{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 40px;
+    background: $greenColor;
+    bottom: -10px;
+    left: 0px;
+}
+.siteHeader .headerToggleMenu {
+    display: none;
+}
+.siteInnerHeader button#menu-toggle:focus {
+    box-shadow: none;
+}
+div#wrapper.contentSection {
+    padding-top: 60px;
+}
+button.navbar-toggler {
+    display: none;
+}
+.headSetIcon span.setICon {
+    height: 60px;
+    width: 60px;
+}
+.siteInnerHeader {
+    height: 60px;
+}
+.signupRightBox .loginInner {
+    padding: 30px 20px 30px;
+}
+.loginInner {
+    width: 100%;
+}
+.loginMidSec {
+    padding: 0 30px;
+}
+.loginInner .form-control {
+    border-radius: 0px;
+}
+.loginSubmitBtn button.submitBtn {
+    border-radius: 0;
+}
+}
+@media(max-width:540px){
+.latestNewsVideo .dashboardVideoMedia, .agendaVideoSec video.dashboardVideoMedia {
+    width: 100%;
+    object-fit: cover;
+    height: 210px;
+}
+.dashboardVideo video.dashboardVideoMedia {
+    object-fit: cover;
+    height: 210px;
+}
+.footerGoTop a#backToTop svg {
+    font-size: 13px;
+    margin-left: 5px;
+}
+.footerGoTop a#backToTop {
+    font-size: 9px;
+}
+.footerPowerLogo span.footerPower {
+    font-size: 8px;
+    margin-right: 10px;
+}
+.footerPawerLogo img {
+    width: 40px;
+}
+.footerAnkLogo img {
+    width: 80px;
+}
+.siteFooter {
+    padding: 10px 10px;
+}
+.profileChat {
+    padding-bottom: 0px;
+}
+.profileChatText p.attendeeComp, .profileChatText p.attendeeDes {
+    font-size: 12px;
+}
+.profileChatText h3.attendeeName {
+    font-size: 13px;
+}
+.settingLikeMindSec p {
+    font-weight: 500;
+    font-size: 14px;
+}
+.profileChat .profileChatImg img {
+    width: 50px;
+    height: 50px;
+}
+.settingLikeMindSec h3 {
+    font-size: 16px;
+}
+.settingPointSec .pointSec h3, .settingPointSec .pointSec p {
+    font-size: 14px;
+}
+.settingProText p {
+    font-size: 13px;
+}
+.settingProText p a {
+    font-size: 13px;
+}
+.settingProText {
+    padding-left: 10px;
+}
+.settingProImg, .settingProImg img {
+    width: 60px;
+    height: 60px;
+}
+.headSetIcon:hover .headerSettingBlock {
+    width: 100%;
+    padding: 10px;
+}
+span.sideBarIcon {
+    width: 45px;
+    height: 45px;
+}
+.siteInnerHeader button#menu-toggle {
+    width: 22px;
+}
+.siteInnerHeader button#menu-toggle:after {
+    width: 30px;
+    top: -9px;
+}
+.siteInnerHeader button#menu-toggle:before {
+    width: 30px;
+    bottom: -9px;
+}
+.headerLogo img {
+    width: 170px;
+}
+.worldCountriesBlock .countryBlock {
+    width: 100%;
+    padding: 20px 0;
+    min-height: unset;
+}
+.dashboardAttendies .attendiesBlock .userAttendy {
+    margin: 15px 10px;
+}
+.dashboardAttendies .attendiesBlock .userAttendy img {
+    width: 60px;
+}
+.agendaHighLightInner .sec-4Block .videoControlBtn img, .dashboardVideo .videoControlBtn img, .latestNewsVideo .videoControlBtn img, .agendaHighLightInner .sec-4Block .videoControlBtn img {
+    width: 70px;
+}
+.forgotPassPage .loginInner {
+    padding: 20px 20px 20px;
+}
+.signupQuest .slider.round {
+    width: 60px;
+}
+.signupQuest .form-group h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.signupStep2Btn {
+    margin-top: 20px;
+    border-top: 1px solid #fff;
+    padding-top: 30px;
+}
+.signupRightBox .loginInner {
+    width: 100%;
+}
+.signupStep2Btn {
+    flex-direction: column;
+}
+.signupStep2Btn button.btn-previous {
+    border-radius: 0;
+}
+.signupQuest .form-group {
+    justify-content: space-between;
+    flex-direction: column;
+}
+.signupRightBox .RegRow {
+    margin: 0 0px;
+    flex-direction: column;
+}
+.signupRightBox .RegRow .form-group {
+    width: 100%;
+    padding: 0 0px;
+}
+.regSubmitBtn button.btn, .signupStep2Btn .submitBtn {
+    width: 100%;
+    border-radius: 0;
+}
+.arrowLogo img {
+    width: 220px;
+}
+.loginHeader .headerGreenSec {
+    width: 70px;
+    height: 70px;
+}
+.loginLeftText p {
+    font-size: 20px;
+}
+.loginLeftText h3 {
+    font-size: 18px;
+}
+.loginSubmitBtn {
+    flex-direction: column;
+    align-items: center;
+}
+.notRegBlock p {
+    font-size: 14px;
+    line-height: 19px;
+}
+.notRegBlock {
+    margin-top: 50px;
+    border-top: 1px solid #fff;
+    padding-top: 50px;
+}
+.powerLogo img {
+    width: 75px;
+}
+.poweredByBlock {
+    padding: 20px 10px;
+}
+.loginMidSec {
+    padding: 0 10px;
+}
+.loginInner {
+    padding: 20px 15px 40px;
+}
+.loginSubmitBtn button.submitBtn {
+    width: 100%;
+    margin-top: 10px;
+}
+.regBlock {
+    margin-top: 30px;
+}
+.regBlock a {
+    width: 100%;
+}
+}
+/*====================== End Responsive ====================== */
